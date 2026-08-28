@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="Circute Game Jam"
+run/main_scene="uid://b7h7t5t5bvpyw"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -18,6 +19,7 @@ config/icon="res://icon.svg"
 
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+window/show_image=true
 
 [physics]
 

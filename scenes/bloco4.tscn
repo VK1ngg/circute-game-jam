@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://bav4f3xe874qf"]
+
+[ext_resource type="Script" uid="uid://f8ruo8oy8svv" path="res://scripts/bloco4.gd" id="1_ewp4b"]
+[ext_resource type="Texture2D" uid="uid://bscyc8n41tutf" path="res://icon.svg" id="2_e6ux7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fl0r3"]
+size = Vector2(128, 128)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ral2h"]
+size = Vector2(45, 127)
+
+[node name="_" type="StaticBody2D" unique_id=2041450650]
+script = ExtResource("1_ewp4b")
+
+[node name="Area" type="CollisionShape2D" parent="." unique_id=566918265]
+visible = false
+position = Vector2(64, 64)
+shape = SubResource("RectangleShape2D_fl0r3")
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=1524896028]
+position = Vector2(64, 64)
+texture = ExtResource("2_e6ux7")
+
+[node name="Sprite2" type="Sprite2D" parent="." unique_id=2037910987]
+modulate = Color(0, 1, 0, 1)
+position = Vector2(64, 48)
+scale = Vector2(0.5, 0.75)
+texture = ExtResource("2_e6ux7")
+
+[node name="Sprite3" type="Sprite2D" parent="." unique_id=1893642227]
+modulate = Color(0, 1, 0, 1)
+position = Vector2(49.000004, 66)
+scale = Vector2(0.75, 0.5)
+texture = ExtResource("2_e6ux7")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=249524571]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2052144550]
+position = Vector2(-22.5, 63.5)
+shape = SubResource("RectangleShape2D_ral2h")

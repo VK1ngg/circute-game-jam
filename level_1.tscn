@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://b7h7t5t5bvpyw"]
+
+[ext_resource type="PackedScene" uid="uid://0meur163iqx0" path="res://scenes/bloco2.tscn" id="1_3hls8"]
+
+[node name="Level1" type="Node2D" unique_id=158150632]
+
+[node name="FonteEnergia" parent="." unique_id=2041450650 instance=ExtResource("1_3hls8")]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=895090551]
+position = Vector2(960, 540)
