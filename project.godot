@@ -21,10 +21,6 @@ window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 window/show_image=true
 
-[dotnet]
-
-project/assembly_name="Circute Game Jam"
-
 [physics]
 
 3d/physics_engine="Jolt Physics"
