@@ -3,9 +3,6 @@
 [ext_resource type="Script" uid="uid://b7hnr82xfuxvn" path="res://scripts/bloco7.gd" id="1_piktb"]
 [ext_resource type="Texture2D" uid="uid://bscyc8n41tutf" path="res://icon.svg" id="2_7pwpv"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_fl0r3"]
-size = Vector2(128, 128)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_piktb"]
 size = Vector2(110, 16)
 
@@ -52,9 +49,13 @@ _data = {
 [node name="_" type="Area2D" unique_id=1945160137]
 script = ExtResource("1_piktb")
 
-[node name="Area" type="CollisionShape2D" parent="." unique_id=566918265]
-position = Vector2(64, 64)
-shape = SubResource("RectangleShape2D_fl0r3")
+[node name="CS" type="CollisionShape2D" parent="." unique_id=220754917]
+position = Vector2(-6, 64)
+shape = SubResource("RectangleShape2D_piktb")
+
+[node name="CS2" type="CollisionShape2D" parent="." unique_id=1727820877]
+position = Vector2(64, 133)
+shape = SubResource("RectangleShape2D_7pwpv")
 
 [node name="Sprite" type="Sprite2D" parent="." unique_id=1524896028]
 position = Vector2(64, 64)
@@ -72,16 +73,8 @@ position = Vector2(48, 66)
 scale = Vector2(0.75, 0.5)
 texture = ExtResource("2_7pwpv")
 
-[node name="Area2D" type="Area2D" parent="." unique_id=249524571]
-monitorable = false
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D" unique_id=220754917]
-position = Vector2(63, 136)
-shape = SubResource("RectangleShape2D_piktb")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1727820877]
-position = Vector2(-8.75, 64)
-shape = SubResource("RectangleShape2D_7pwpv")
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=602754045]
 libraries/ = SubResource("AnimationLibrary_piktb")
+
+[connection signal="area_entered" from="." to="." method="energizar"]
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

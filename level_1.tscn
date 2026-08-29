@@ -1,10 +1,11 @@
 [gd_scene format=3 uid="uid://b7h7t5t5bvpyw"]
 
 [ext_resource type="PackedScene" uid="uid://0meur163iqx0" path="res://scenes/bloco2.tscn" id="1_3hls8"]
-[ext_resource type="PackedScene" uid="uid://dehyjl1udu7ty" path="res://scenes/fonte_energia.tscn" id="1_hbghi"]
+[ext_resource type="PackedScene" uid="uid://dehyjl1udu7ty" path="res://scenes/FonteEnergia1.tscn" id="1_hbghi"]
 [ext_resource type="PackedScene" uid="uid://css2oat4mdycw" path="res://scenes/bloco6.tscn" id="3_rka8t"]
 [ext_resource type="PackedScene" uid="uid://o1f6yeo3033n" path="res://scenes/bloco5.tscn" id="4_5hph3"]
 [ext_resource type="PackedScene" uid="uid://bav4f3xe874qf" path="res://scenes/bloco4.tscn" id="5_j7kpp"]
+[ext_resource type="PackedScene" uid="uid://8igy0yocoobw" path="res://scenes/bloco7.tscn" id="6_5hph3"]
 
 [node name="Level1" type="Node2D" unique_id=158150632]
 
@@ -28,3 +29,6 @@ position = Vector2(589, 254)
 
 [node name="_5" parent="." unique_id=2140648214 instance=ExtResource("5_j7kpp")]
 position = Vector2(461, 254)
+
+[node name="_6" parent="." unique_id=1945160137 instance=ExtResource("6_5hph3")]
+position = Vector2(590, 124)

@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://dehyjl1udu7ty"]
+
+[ext_resource type="Script" uid="uid://csja4q2d1xyci" path="res://scripts/fonteenergia.gd" id="1_wno8l"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ral2h"]
+size = Vector2(50.5, 48)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_tmf6p"]
+load_path = "res://.godot/imported/TILES.png-61fba83f6da1af9f5ec07d55e27a9261.ctex"
+
+[node name="FonteEnergia" type="Area2D" unique_id=1846498572]
+script = ExtResource("1_wno8l")
+
+[node name="CS" type="CollisionShape2D" parent="." unique_id=512953135]
+position = Vector2(93, 48)
+shape = SubResource("RectangleShape2D_ral2h")
+
+[node name="CS2" type="CollisionShape2D" parent="." unique_id=1351294064]
+position = Vector2(2.75, 49)
+shape = SubResource("RectangleShape2D_ral2h")
+
+[node name="_" type="Sprite2D" parent="." unique_id=1524896028]
+modulate = Color(1, 1, 0, 1)
+position = Vector2(48, 48)
+texture = SubResource("CompressedTexture2D_tmf6p")
+region_enabled = true
+region_rect = Rect2(480, 0, 96, 96)
+
+[connection signal="area_entered" from="." to="." method="energizar"]
