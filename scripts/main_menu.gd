@@ -1,35 +1,35 @@
 extends Control
 
+@onready var BrancoStart = $Start/Branco
+@onready var BrancoOptions = $Options/Branco
+@onready var BrancoQuit = $Quit/Branco
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	$AnimationPlayer.play("Entering")
+
+func _on_button_mouse_entered() -> void:
+	BrancoStart.visible = true
+
+func _on_button_mouse_exited() -> void:
+	BrancoStart.visible = false
+
+func _on_options_text_mouse_entered() -> void:
+	BrancoOptions.visible = true
+
+func _on_options_text_mouse_exited() -> void:
+	BrancoOptions.visible = false
+
+func _on_quit_text_mouse_entered() -> void:
+	BrancoQuit.visible = true
+
+func _on_quit_text_mouse_exited() -> void:
+	BrancoQuit.visible = false
+
+func Start_pressed() -> void:
 	pass # Replace with function body.
 
+func Options_Pressed() -> void:
+	pass # Replace with function body.
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
-
-func _on_start_mouse_entered() -> void:
-	$Start/Branco.visible = true
-
-
-func _on_start_mouse_exited() -> void:
-	$Start/Branco.visible = false
-
-
-func _on_options_mouse_entered() -> void:
-	$Options/Branco.visible = true
-
-
-func _on_options_mouse_exited() -> void:
-	$Options/Branco.visible = false
-
-
-func _on_quit_2_mouse_entered() -> void:
-	$Quit2/Branco.visible = true
-
-
-func _on_quit_2_mouse_exited() -> void:
-	$Quit2/Branco.visible = false
+func Quit_Pressed() -> void:
+	pass # Replace with function body.

@@ -5,28 +5,42 @@
 [ext_resource type="Texture2D" uid="uid://dd4cfomgpy0cw" path="res://assets/MAIN TITLE/white.png" id="2_ism2r"]
 [ext_resource type="Texture2D" uid="uid://c3vgw0qri68wa" path="res://assets/MAIN TITLE/play and settings button.png" id="2_qgd8p"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_fl0r3"]
-size = Vector2(241, 88)
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ism2r"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fl0r3"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_im4cs"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ral2h"]
-size = Vector2(302.50006, 98.75006)
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_chhbp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_n0q5r"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_skvia"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ral2h"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_7131d"]
-size = Vector2(129, 68)
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7fusm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_b2lsp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mtiyh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ma6vl"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fl0r3"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_es6bt"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l3c6x"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ld6kw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1fbba"]
+
 [sub_resource type="Animation" id="Animation_ism2r"]
 resource_name = "Entering"
-loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Start:modulate")
+tracks/0/path = NodePath("Options:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -38,22 +52,10 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Options:modulate")
+tracks/1/path = NodePath("Quit:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 0.5),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Quit2:modulate")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 0.5),
 "update": 0,
@@ -65,7 +67,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Start:modulate")
+tracks/0/path = NodePath("Options:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -77,22 +79,10 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Options:modulate")
+tracks/1/path = NodePath("Quit:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Quit2:modulate")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
@@ -118,101 +108,122 @@ script = ExtResource("1_ism2r")
 
 [node name="Arte" type="TextureRect" parent="." unique_id=1399080425]
 layout_mode = 1
-offset_left = 1.0
-offset_right = 1921.0
+offset_right = 1920.0
 offset_bottom = 1080.0
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("1_1i3ks")
 
-[node name="Start" type="Area2D" parent="." unique_id=1277127019]
+[node name="Start" type="Control" parent="." unique_id=809626187]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
-[node name="CS" type="CollisionShape2D" parent="Start" unique_id=1611777470]
+[node name="Branco" type="Sprite2D" parent="Start" unique_id=765506108]
 visible = false
-position = Vector2(182.5, 334)
-shape = SubResource("RectangleShape2D_fl0r3")
-
-[node name="Branco" type="Sprite2D" parent="Start" unique_id=887489719]
-modulate = Color(0.9882353, 1, 0.99215686, 0)
-position = Vector2(183.50002, 334)
-scale = Vector2(12.684212, 4.6315784)
+position = Vector2(183.99998, 333.5)
+scale = Vector2(12.842106, 4.789475)
 texture = ExtResource("2_ism2r")
 
 [node name="Azul" type="Sprite2D" parent="Start" unique_id=1824773709]
 position = Vector2(183.5, 334.5)
-scale = Vector2(0.7952218, 0.75490195)
+scale = Vector2(0.79522187, 0.75490206)
 texture = ExtResource("2_qgd8p")
 
-[node name="StartText" type="Label" parent="Start" unique_id=1861563671]
-offset_left = 69.0
-offset_top = 284.0
-offset_right = 302.0
-offset_bottom = 381.0
+[node name="Button" type="Button" parent="Start" unique_id=1423846217]
+layout_mode = 0
+offset_left = 62.0
+offset_top = 288.0
+offset_right = 306.0
+offset_bottom = 379.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 70
-theme_override_styles/normal = SubResource("StyleBoxEmpty_fl0r3")
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 66
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ism2r")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_im4cs")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_chhbp")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_n0q5r")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_skvia")
+button_mask = 3
 text = "START!"
 
-[node name="Options" type="Area2D" parent="." unique_id=1147810365]
-position = Vector2(185, 430)
+[node name="Options" type="Control" parent="." unique_id=1300125808]
+anchors_preset = 0
+offset_left = 185.0
+offset_top = 430.0
+offset_right = 185.0
+offset_bottom = 430.0
 scale = Vector2(0.8, 0.8)
 
-[node name="CS" type="CollisionShape2D" parent="Options" unique_id=985462165]
-visible = false
-position = Vector2(-1.5258789e-05, 5.625)
-scale = Vector2(0.9999995, 0.9999995)
-shape = SubResource("RectangleShape2D_ral2h")
-
 [node name="Branco" type="Sprite2D" parent="Options" unique_id=1750357947]
+visible = false
 position = Vector2(0.6249724, 5.000019)
 scale = Vector2(15.855264, 5.2631583)
 texture = ExtResource("2_ism2r")
 
 [node name="Azul" type="Sprite2D" parent="Options" unique_id=643484355]
-position = Vector2(0.125, 5.6250086)
-scale = Vector2(0.99914676, 0.8455884)
+position = Vector2(0.624996, 5.6250086)
+scale = Vector2(0.98549485, 0.8455884)
 texture = ExtResource("2_qgd8p")
 
-[node name="OptionsText" type="Label" parent="Options" unique_id=1942502028]
-offset_left = -121.25
-offset_top = -38.75
-offset_right = 128.75
-offset_bottom = 58.25
+[node name="Options" type="Button" parent="Options" unique_id=995614404]
+layout_mode = 0
+offset_left = -150.0
+offset_top = -45.0
+offset_right = 151.24997
+offset_bottom = 55.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
 theme_override_font_sizes/font_size = 60
 theme_override_styles/normal = SubResource("StyleBoxEmpty_ral2h")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_7fusm")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_b2lsp")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_mtiyh")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ma6vl")
 text = "Options"
 
-[node name="Quit2" type="Area2D" parent="." unique_id=448345500]
-position = Vector2(180, 523)
+[node name="Quit" type="Control" parent="." unique_id=1221352971]
+anchors_preset = 0
+offset_left = 180.0
+offset_top = 523.0
+offset_right = 180.0
+offset_bottom = 523.0
 
-[node name="CS" type="CollisionShape2D" parent="Quit2" unique_id=173707793]
+[node name="Branco" type="Sprite2D" parent="Quit" unique_id=1452412044]
 visible = false
-shape = SubResource("RectangleShape2D_7131d")
-
-[node name="Branco" type="Sprite2D" parent="Quit2" unique_id=1452412044]
 scale = Vector2(6.8157897, 3.5526302)
 texture = ExtResource("2_ism2r")
 
-[node name="Azul" type="Sprite2D" parent="Quit2" unique_id=577679679]
+[node name="Azul" type="Sprite2D" parent="Quit" unique_id=577679679]
 scale = Vector2(0.41296926, 0.58823514)
 texture = ExtResource("2_qgd8p")
 
-[node name="QuitText" type="Label" parent="Quit2" unique_id=75319642]
-offset_left = -56.0
-offset_top = -44.0
-offset_right = 94.0
-offset_bottom = 53.0
+[node name="Quit" type="Button" parent="Quit" unique_id=805169264]
+layout_mode = 0
+offset_left = -65.0
+offset_top = -34.0
+offset_right = 64.0
+offset_bottom = 35.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 60
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxTexture_fl0r3")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_es6bt")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_l3c6x")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ld6kw")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_1fbba")
 text = "Exit"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1856713385]
 libraries/ = SubResource("AnimationLibrary_15uo5")
 
-[connection signal="mouse_entered" from="Start" to="." method="_on_start_mouse_entered"]
-[connection signal="mouse_exited" from="Start" to="." method="_on_start_mouse_exited"]
+[connection signal="mouse_entered" from="Start/Button" to="." method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="Start/Button" to="." method="_on_button_mouse_exited"]
+[connection signal="pressed" from="Start/Button" to="." method="Start_pressed"]
 [connection signal="mouse_entered" from="Options" to="." method="_on_options_mouse_entered"]
 [connection signal="mouse_exited" from="Options" to="." method="_on_options_mouse_exited"]
-[connection signal="mouse_entered" from="Quit2" to="." method="_on_quit_2_mouse_entered"]
-[connection signal="mouse_exited" from="Quit2" to="." method="_on_quit_2_mouse_exited"]
+[connection signal="mouse_entered" from="Options/Options" to="." method="_on_options_text_mouse_entered"]
+[connection signal="mouse_exited" from="Options/Options" to="." method="_on_options_text_mouse_exited"]
+[connection signal="pressed" from="Options/Options" to="." method="Options_Pressed"]
+[connection signal="mouse_entered" from="Quit/Quit" to="." method="_on_quit_text_mouse_entered"]
+[connection signal="mouse_exited" from="Quit/Quit" to="." method="_on_quit_text_mouse_exited"]
+[connection signal="pressed" from="Quit/Quit" to="." method="Quit_Pressed"]
