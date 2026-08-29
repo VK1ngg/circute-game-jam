@@ -1,10 +1,15 @@
 [gd_scene format=3 uid="uid://b7h7t5t5bvpyw"]
 
 [ext_resource type="PackedScene" uid="uid://0meur163iqx0" path="res://scenes/bloco2.tscn" id="1_3hls8"]
+[ext_resource type="PackedScene" uid="uid://dehyjl1udu7ty" path="res://scenes/fonte_energia.tscn" id="1_hbghi"]
 
 [node name="Level1" type="Node2D" unique_id=158150632]
 
-[node name="FonteEnergia" parent="." unique_id=2041450650 instance=ExtResource("1_3hls8")]
-
 [node name="Camera2D" type="Camera2D" parent="." unique_id=895090551]
-position = Vector2(960, 540)
+position = Vector2(576, 324)
+
+[node name="FonteEnergia" parent="." unique_id=2041450650 instance=ExtResource("1_hbghi")]
+position = Vector2(77, 254)
+
+[node name="_" parent="." unique_id=269850921 instance=ExtResource("1_3hls8")]
+position = Vector2(207, 254)
