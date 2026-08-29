@@ -7,10 +7,10 @@ var down = false
 var energia = false
 
 func energizar(body: Node2D) -> void:
-	if energia == true:
-		body.energia = true
+	if body.right == true or body.left == true:
+		if energia == true:
+			body.energia = true
 
 func _process(_delta: float) -> void:
 	if energia == true:
 		$AnimationPlayer.play("energizado")
-		

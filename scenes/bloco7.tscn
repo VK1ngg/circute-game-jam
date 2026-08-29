@@ -6,14 +6,53 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fl0r3"]
 size = Vector2(128, 128)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ral2h"]
-size = Vector2(45, 127)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_piktb"]
+size = Vector2(110, 16)
 
-[node name="_" type="StaticBody2D" unique_id=2041450650]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7pwpv"]
+size = Vector2(16.5, 112)
+
+[sub_resource type="Animation" id="Animation_dci40"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_nfbpx"]
+resource_name = "energizado"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 0, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_piktb"]
+_data = {
+&"RESET": SubResource("Animation_dci40"),
+&"energizado": SubResource("Animation_nfbpx")
+}
+
+[node name="_" type="Area2D" unique_id=1945160137]
 script = ExtResource("1_piktb")
 
 [node name="Area" type="CollisionShape2D" parent="." unique_id=566918265]
-visible = false
 position = Vector2(64, 64)
 shape = SubResource("RectangleShape2D_fl0r3")
 
@@ -34,7 +73,15 @@ scale = Vector2(0.75, 0.5)
 texture = ExtResource("2_7pwpv")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=249524571]
+monitorable = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2052144550]
-position = Vector2(-22.5, 63.5)
-shape = SubResource("RectangleShape2D_ral2h")
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D" unique_id=220754917]
+position = Vector2(63, 136)
+shape = SubResource("RectangleShape2D_piktb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1727820877]
+position = Vector2(-8.75, 64)
+shape = SubResource("RectangleShape2D_7pwpv")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=602754045]
+libraries/ = SubResource("AnimationLibrary_piktb")
