@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Circute Game Jam"
-run/main_scene="uid://b7h7t5t5bvpyw"
+run/main_scene="uid://c0vfxqh5hyjdi"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
