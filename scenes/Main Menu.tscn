@@ -524,7 +524,7 @@ texture = ExtResource("2_qgd8p")
 layout_mode = 0
 offset_left = -150.0
 offset_top = -45.0
-offset_right = 151.24997
+offset_right = 151.25
 offset_bottom = 55.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 5
@@ -688,8 +688,8 @@ text = "No
 [connection signal="mouse_entered" from="Quit/Quit" to="." method="_on_quit_text_mouse_entered"]
 [connection signal="mouse_exited" from="Quit/Quit" to="." method="_on_quit_text_mouse_exited"]
 [connection signal="pressed" from="Quit/Quit" to="." method="Quit_Pressed"]
-[connection signal="mouse_entered" from="Yes/Yes" to="." method="_on_yes_mouse_entered"]
 [connection signal="mouse_entered" from="Yes/Yes" to="." method="_on_yes_2_mouse_entered"]
+[connection signal="mouse_entered" from="Yes/Yes" to="." method="_on_yes_mouse_entered"]
 [connection signal="mouse_exited" from="Yes/Yes" to="." method="_on_yes_mouse_exited"]
 [connection signal="pressed" from="Yes/Yes" to="." method="yes_pressed"]
 [connection signal="mouse_entered" from="No/No" to="." method="_on_no_mouse_entered"]

@@ -6,28 +6,93 @@
 [ext_resource type="PackedScene" uid="uid://0dnmrau6fqi2" path="res://scenes/blocos/BlocoT.tscn" id="4_mg82l"]
 [ext_resource type="PackedScene" uid="uid://cq5rhdqk3togr" path="res://scenes/blocos/BlocoResistencia.tscn" id="5_mjud8"]
 [ext_resource type="PackedScene" uid="uid://ddo4k44xw6jhj" path="res://scenes/blocos/BlocoCapacitor.tscn" id="6_xjlet"]
+[ext_resource type="Texture2D" uid="uid://dfptbut3wdclt" path="res://assets/GAMEPLAY/desk.png" id="7_20svv"]
+[ext_resource type="Texture2D" uid="uid://bysy6ww3ekwb" path="res://assets/GAMEPLAY/HUD/PAUSE.png" id="8_xjlet"]
+[ext_resource type="Texture2D" uid="uid://b3uvodqf57xp8" path="res://assets/GAMEPLAY/HUD/CLOCK.png" id="9_3jmak"]
+[ext_resource type="Texture2D" uid="uid://byvawknht1nnh" path="res://assets/GAMEPLAY/HUD/MULTIMETRO.png" id="10_qkdw7"]
+[ext_resource type="Texture2D" uid="uid://du6iujd5n5fki" path="res://assets/GAMEPLAY/HUD/PAUSESCREENBG.png" id="11_ci5gr"]
 
-[node name="Node2D" type="Node2D" unique_id=1359308894]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fl0r3"]
 
-[node name="_" parent="." unique_id=1728586725 instance=ExtResource("1_qjden")]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ral2h"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7131d"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sa41n"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ldkp4"]
+
+[node name="Teste" type="Node2D" unique_id=1359308894]
+
+[node name="Mesa" type="Node2D" parent="." unique_id=388698699]
+position = Vector2(184, -101)
+
+[node name="_" parent="Mesa" unique_id=1728586725 instance=ExtResource("1_qjden")]
 position = Vector2(230, 257)
 
-[node name="FonteEnergia" parent="." unique_id=1846498572 instance=ExtResource("2_20svv")]
+[node name="FonteEnergia" parent="Mesa" unique_id=1846498572 instance=ExtResource("2_20svv")]
 position = Vector2(132, 258)
 
-[node name="_2" parent="." unique_id=1158597934 instance=ExtResource("1_qjden")]
+[node name="_2" parent="Mesa" unique_id=1158597934 instance=ExtResource("1_qjden")]
 position = Vector2(328, 256)
 
-[node name="BlocoL" parent="." unique_id=2140648214 instance=ExtResource("3_iar4u")]
+[node name="BlocoL" parent="Mesa" unique_id=2140648214 instance=ExtResource("3_iar4u")]
 position = Vector2(425, 255)
 rotation = 1.5707964
 
-[node name="BlocoL2" parent="." unique_id=1729569189 instance=ExtResource("4_mg82l")]
+[node name="BlocoL2" parent="Mesa" unique_id=1729569189 instance=ExtResource("4_mg82l")]
 position = Vector2(425, 352)
 
-[node name="BlocoResistencia" parent="." unique_id=920659298 instance=ExtResource("5_mjud8")]
+[node name="BlocoResistencia" parent="Mesa" unique_id=920659298 instance=ExtResource("5_mjud8")]
 position = Vector2(524, 352)
 
-[node name="BlocoResistencia2" parent="." unique_id=668896888 instance=ExtResource("6_xjlet")]
+[node name="BlocoResistencia2" parent="Mesa" unique_id=668896888 instance=ExtResource("6_xjlet")]
 position = Vector2(425, 449)
 rotation = 1.5707964
+
+[node name="BG" type="Sprite2D" parent="Mesa" unique_id=411277387]
+position = Vector2(394.50006, 423.00003)
+scale = Vector2(0.6390625, 0.6462963)
+texture = ExtResource("7_20svv")
+
+[node name="PauseButton" type="Node2D" parent="." unique_id=874238469]
+
+[node name="PauseButton" type="Sprite2D" parent="PauseButton" unique_id=1031928277]
+position = Vector2(1098, 54)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("8_xjlet")
+
+[node name="Button" type="Button" parent="PauseButton" unique_id=1317218465]
+offset_left = 1064.0
+offset_top = 19.0
+offset_right = 1134.0
+offset_bottom = 90.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_fl0r3")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_ral2h")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_7131d")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_sa41n")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ldkp4")
+
+[node name="Relógio" type="Sprite2D" parent="." unique_id=1634044171]
+position = Vector2(169, 343)
+texture = ExtResource("9_3jmak")
+
+[node name="Multímetro" type="Sprite2D" parent="." unique_id=186407304]
+position = Vector2(1045, 481.99997)
+scale = Vector2(0.68, 0.68)
+texture = ExtResource("10_qkdw7")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=927930365]
+
+[node name="Pause" type="Control" parent="." unique_id=219832563]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 51.0
+offset_bottom = 51.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="PauseBG" type="Sprite2D" parent="Pause" unique_id=375537103]
+position = Vector2(578, 324)
+scale = Vector2(0.95, 0.95)
+texture = ExtResource("11_ci5gr")
