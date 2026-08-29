@@ -12,4 +12,7 @@ position = Vector2(576, 324)
 position = Vector2(77, 254)
 
 [node name="_" parent="." unique_id=269850921 instance=ExtResource("1_3hls8")]
-position = Vector2(207, 254)
+position = Vector2(205, 254)
+
+[node name="_2" parent="." unique_id=1728586725 instance=ExtResource("1_3hls8")]
+position = Vector2(333, 254)

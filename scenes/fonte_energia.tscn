@@ -9,7 +9,7 @@ size = Vector2(128, 128)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ral2h"]
 size = Vector2(47, 128)
 
-[node name="FonteEnergia" type="StaticBody2D" unique_id=2041450650]
+[node name="FonteEnergia" type="Area2D" unique_id=1846498572]
 script = ExtResource("1_wno8l")
 
 [node name="Area" type="CollisionShape2D" parent="." unique_id=566918265]
@@ -28,4 +28,4 @@ texture = ExtResource("1_kmoo0")
 position = Vector2(160.5, 64)
 shape = SubResource("RectangleShape2D_ral2h")
 
-[connection signal="area_shape_entered" from="Area2D" to="." method="energizar"]
+[connection signal="area_entered" from="Area2D" to="." method="energizar"]
