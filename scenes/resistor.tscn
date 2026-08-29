@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://cxpjmnv4uubdd"]
+
+[ext_resource type="Texture2D" uid="uid://bscyc8n41tutf" path="res://icon.svg" id="1_hywbn"]
+
+[node name="Resistor" type="Area2D" unique_id=564649796]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=854283552]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=858956083]
+position = Vector2(64, 64)
+texture = ExtResource("1_hywbn")
