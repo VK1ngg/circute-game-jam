@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://c0vfxqh5hyjdi"]
+
+[node name="ScencesManager" type="Node" unique_id=1383247078]
+
+[node name="Scene2D" type="Node2D" parent="." unique_id=1246008248]
+
+[node name="ScenceControl" type="Control" parent="." unique_id=1974042568]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
