@@ -1,38 +1,109 @@
 [gd_scene format=3 uid="uid://demqcytm636wn"]
 
-[ext_resource type="Texture2D" uid="uid://cy0wt5ilp2au0" path="res://assets/main title.png" id="1_qgd8p"]
-[ext_resource type="Texture2D" uid="uid://bca53g703ogsh" path="res://assets/play and settings button.png" id="2_1i3ks"]
+[ext_resource type="Texture2D" path="res://assets/main title.png" id="1_qgd8p"]
+[ext_resource type="Texture2D" uid="uid://c3vgw0qri68wa" path="res://assets/MAIN TITLE/play and settings button.png" id="2_qgd8p"]
 
-[node name="Control" type="Control" unique_id=1303953170]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fl0r3"]
+size = Vector2(251, 98)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ral2h"]
+size = Vector2(312.5, 123.75006)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7131d"]
+size = Vector2(251, 98)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fl0r3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ral2h"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fl0r3"]
+
+[node name="Main Menu" type="Control" unique_id=1303953170]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 
-[node name="Arte" type="Sprite2D" parent="." unique_id=1226903251]
-position = Vector2(576, 324)
+[node name="Arte" type="TextureRect" parent="." unique_id=1399080425]
+layout_mode = 1
+offset_left = 1.0
+offset_right = 1921.0
+offset_bottom = 1080.0
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("1_qgd8p")
 
-[node name="Start" type="Sprite2D" parent="." unique_id=618463555]
-position = Vector2(186, 333.0001)
-scale = Vector2(0.8, 0.8)
-texture = ExtResource("2_1i3ks")
-region_enabled = true
-region_rect = Rect2(100.85033, 679.5624, 313.8072, 122.17285)
+[node name="Start" type="Area2D" parent="." unique_id=1277127019]
 
-[node name="Options" type="Sprite2D" parent="." unique_id=1623178940]
+[node name="CS" type="CollisionShape2D" parent="Start" unique_id=1611777470]
+visible = false
+position = Vector2(185.5, 333)
+shape = SubResource("RectangleShape2D_fl0r3")
+
+[node name="Azul" type="Sprite2D" parent="Start" unique_id=1824773709]
+position = Vector2(182.25, 333.5)
+scale = Vector2(0.80375427, 0.7941176)
+texture = ExtResource("2_qgd8p")
+
+[node name="Sprite2D" type="Sprite2D" parent="Start/Azul" unique_id=887489719]
+
+[node name="Options" type="Area2D" parent="." unique_id=1147810365]
 position = Vector2(185.00002, 442.99997)
 scale = Vector2(0.8, 0.8)
-texture = ExtResource("2_1i3ks")
-region_enabled = true
-region_rect = Rect2(100.85033, 679.5624, 313.8072, 122.17285)
 
-[node name="Quit" type="Sprite2D" parent="." unique_id=199480540]
-position = Vector2(185.00002, 553.00006)
-scale = Vector2(0.8, 0.8)
-texture = ExtResource("2_1i3ks")
-region_enabled = true
-region_rect = Rect2(100.85033, 679.5624, 313.8072, 122.17285)
+[node name="CS" type="CollisionShape2D" parent="Options" unique_id=985462165]
+visible = false
+position = Vector2(0, 0.625)
+scale = Vector2(0.9999998, 0.9999998)
+shape = SubResource("RectangleShape2D_ral2h")
+
+[node name="Sprite2D" type="Sprite2D" parent="Options" unique_id=1750357947]
+
+[node name="Sprite2D2" type="Sprite2D" parent="Options" unique_id=643484355]
+
+[node name="Quit2" type="Area2D" parent="." unique_id=448345500]
+
+[node name="CS" type="CollisionShape2D" parent="Quit2" unique_id=173707793]
+visible = false
+position = Vector2(184.5, 553)
+shape = SubResource("RectangleShape2D_7131d")
+
+[node name="Sprite2D" type="Sprite2D" parent="Quit2" unique_id=1452412044]
+
+[node name="Sprite2D2" type="Sprite2D" parent="Quit2" unique_id=577679679]
+
+[node name="StartText" type="TextEdit" parent="." unique_id=1432610596]
+layout_mode = 0
+offset_left = 69.0
+offset_top = 284.0
+offset_right = 302.0
+offset_bottom = 381.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 70
+theme_override_styles/normal = SubResource("StyleBoxEmpty_fl0r3")
+text = "START!"
+
+[node name="OptionsText" type="TextEdit" parent="." unique_id=638507733]
+layout_mode = 0
+offset_left = 69.0
+offset_top = 396.0
+offset_right = 319.0
+offset_bottom = 493.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ral2h")
+text = "Options"
+
+[node name="QuitText" type="TextEdit" parent="." unique_id=1924197980]
+layout_mode = 0
+offset_left = 123.0
+offset_top = 506.0
+offset_right = 273.0
+offset_bottom = 603.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxTexture_fl0r3")
+text = "Exit"
