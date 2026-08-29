@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://demqcytm636wn"]
+
+[ext_resource type="Texture2D" uid="uid://cy0wt5ilp2au0" path="res://assets/main title.png" id="1_qgd8p"]
+[ext_resource type="Texture2D" uid="uid://bca53g703ogsh" path="res://assets/play and settings button.png" id="2_1i3ks"]
+
+[node name="Control" type="Control" unique_id=1303953170]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Arte" type="Sprite2D" parent="." unique_id=1226903251]
+position = Vector2(576, 324)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_qgd8p")
+
+[node name="Start" type="Sprite2D" parent="." unique_id=618463555]
+position = Vector2(186, 333.0001)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("2_1i3ks")
+region_enabled = true
+region_rect = Rect2(100.85033, 679.5624, 313.8072, 122.17285)
+
+[node name="Options" type="Sprite2D" parent="." unique_id=1623178940]
+position = Vector2(185.00002, 442.99997)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("2_1i3ks")
+region_enabled = true
+region_rect = Rect2(100.85033, 679.5624, 313.8072, 122.17285)
+
+[node name="Quit" type="Sprite2D" parent="." unique_id=199480540]
+position = Vector2(185.00002, 553.00006)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("2_1i3ks")
+region_enabled = true
+region_rect = Rect2(100.85033, 679.5624, 313.8072, 122.17285)
