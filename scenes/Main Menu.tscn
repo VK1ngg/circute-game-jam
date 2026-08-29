@@ -61,6 +61,165 @@ tracks/1/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Start:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 0.5),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AreYou:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Yes:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("No:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_uikcu"]
+resource_name = "Quitting"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Start:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 0.5),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Options:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 0.5),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Quit:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 0.5),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Yes/Yes:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 0.5),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("No/No:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 0.5),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Arte:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 6),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0.734375, 0.734375, 0.734375, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Yes:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("No:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("AreYou:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
 
 [sub_resource type="Animation" id="Animation_estw7"]
 length = 0.001
@@ -88,12 +247,207 @@ tracks/1/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 1)]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Start:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Yes/Yes:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("No/No:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Arte:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Yes:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("No:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("AreYou:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_15uo5"]
+resource_name = "UnQuitting"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AreYou:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Yes:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("No:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Arte:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.73333335, 0.73333335, 0.73333335, 1), Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Start:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.96666664),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Options:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Quit:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_15uo5"]
 _data = {
 &"Entering": SubResource("Animation_ism2r"),
-&"RESET": SubResource("Animation_estw7")
+&"Quitting": SubResource("Animation_uikcu"),
+&"RESET": SubResource("Animation_estw7"),
+&"UnQuitting": SubResource("Animation_15uo5")
 }
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ssorb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_estw7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_15uo5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mslyy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sepmt"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uk30l"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q6nfa"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_50kmc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_khfdq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i5clu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_04aus"]
 
 [node name="Main Menu" type="Control" unique_id=1303953170]
 layout_mode = 3
@@ -114,6 +468,7 @@ scale = Vector2(0.6, 0.6)
 texture = ExtResource("1_1i3ks")
 
 [node name="Start" type="Control" parent="." unique_id=809626187]
+self_modulate = Color(1, 1, 1, 0)
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -129,7 +484,7 @@ position = Vector2(183.5, 334.5)
 scale = Vector2(0.79522187, 0.75490206)
 texture = ExtResource("2_qgd8p")
 
-[node name="Button" type="Button" parent="Start" unique_id=1423846217]
+[node name="Start" type="Button" parent="Start" unique_id=1423846217]
 layout_mode = 0
 offset_left = 62.0
 offset_top = 288.0
@@ -137,14 +492,14 @@ offset_right = 306.0
 offset_bottom = 379.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 6
-theme_override_font_sizes/font_size = 66
+theme_override_font_sizes/font_size = 60
 theme_override_styles/normal = SubResource("StyleBoxEmpty_ism2r")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_im4cs")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_chhbp")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_n0q5r")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_skvia")
 button_mask = 3
-text = "START!"
+text = "Start!"
 
 [node name="Options" type="Control" parent="." unique_id=1300125808]
 anchors_preset = 0
@@ -216,9 +571,115 @@ text = "Exit"
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1856713385]
 libraries/ = SubResource("AnimationLibrary_15uo5")
 
-[connection signal="mouse_entered" from="Start/Button" to="." method="_on_button_mouse_entered"]
-[connection signal="mouse_exited" from="Start/Button" to="." method="_on_button_mouse_exited"]
-[connection signal="pressed" from="Start/Button" to="." method="Start_pressed"]
+[node name="AreYou" type="Control" parent="." unique_id=1605143353]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Azul" type="Sprite2D" parent="AreYou" unique_id=1141599169]
+position = Vector2(577.5, 331)
+scale = Vector2(2.5631397, 0.6274508)
+texture = ExtResource("2_qgd8p")
+
+[node name="Label" type="Label" parent="AreYou" unique_id=269366882]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 188.5
+offset_top = 269.5
+offset_right = 923.5
+offset_bottom = 338.50003
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 50
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ssorb")
+text = "Are you sure you want to quit?"
+
+[node name="Yes" type="Control" parent="." unique_id=2057601387]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Branco" type="Sprite2D" parent="Yes" unique_id=1240496418]
+visible = false
+position = Vector2(400.75, 433.875)
+scale = Vector2(6.9736843, 3.5921042)
+texture = ExtResource("2_ism2r")
+
+[node name="Azul" type="Sprite2D" parent="Yes" unique_id=2123001671]
+position = Vector2(400.75003, 433.5)
+scale = Vector2(0.41808876, 0.57843167)
+texture = ExtResource("2_qgd8p")
+
+[node name="Yes" type="Button" parent="Yes" unique_id=2079883891]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 350.0
+offset_top = 350.0
+offset_right = 449.0
+offset_bottom = 433.0
+grow_vertical = 0
+offset_transform_position = Vector2(300, -150)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxEmpty_estw7")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_15uo5")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_mslyy")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_sepmt")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_uk30l")
+disabled = true
+text = "Yes"
+
+[node name="No" type="Control" parent="." unique_id=685597589]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Branco" type="Sprite2D" parent="No" unique_id=1990544516]
+visible = false
+position = Vector2(763.75, 435.25003)
+scale = Vector2(6.2368417, 3.4473684)
+texture = ExtResource("2_ism2r")
+
+[node name="Azul" type="Sprite2D" parent="No" unique_id=58130167]
+position = Vector2(763, 435)
+scale = Vector2(0.37372014, 0.55637294)
+texture = ExtResource("2_qgd8p")
+
+[node name="No" type="Button" parent="No" unique_id=1517902455]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 678.0
+offset_top = 350.0
+offset_right = 762.0
+offset_bottom = 433.0
+grow_horizontal = 0
+grow_vertical = 0
+offset_transform_position = Vector2(-300, -150)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxEmpty_q6nfa")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_50kmc")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_khfdq")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_i5clu")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_04aus")
+disabled = true
+text = "No
+"
+
+[connection signal="mouse_entered" from="Start/Start" to="." method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="Start/Start" to="." method="_on_button_mouse_exited"]
+[connection signal="pressed" from="Start/Start" to="." method="Start_pressed"]
 [connection signal="mouse_entered" from="Options" to="." method="_on_options_mouse_entered"]
 [connection signal="mouse_exited" from="Options" to="." method="_on_options_mouse_exited"]
 [connection signal="mouse_entered" from="Options/Options" to="." method="_on_options_text_mouse_entered"]
@@ -227,3 +688,10 @@ libraries/ = SubResource("AnimationLibrary_15uo5")
 [connection signal="mouse_entered" from="Quit/Quit" to="." method="_on_quit_text_mouse_entered"]
 [connection signal="mouse_exited" from="Quit/Quit" to="." method="_on_quit_text_mouse_exited"]
 [connection signal="pressed" from="Quit/Quit" to="." method="Quit_Pressed"]
+[connection signal="mouse_entered" from="Yes/Yes" to="." method="_on_yes_mouse_entered"]
+[connection signal="mouse_entered" from="Yes/Yes" to="." method="_on_yes_2_mouse_entered"]
+[connection signal="mouse_exited" from="Yes/Yes" to="." method="_on_yes_mouse_exited"]
+[connection signal="pressed" from="Yes/Yes" to="." method="yes_pressed"]
+[connection signal="mouse_entered" from="No/No" to="." method="_on_no_mouse_entered"]
+[connection signal="mouse_exited" from="No/No" to="." method="_on_no_mouse_exited"]
+[connection signal="pressed" from="No/No" to="." method="no_pressed"]
