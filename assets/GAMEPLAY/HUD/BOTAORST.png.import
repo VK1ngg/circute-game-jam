@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cq3re162o7huv"
-path="res://.godot/imported/desk.png-47c441e9ad05fb6a016ffa429440318e.ctex"
+uid="uid://istthxi6siu6"
+path="res://.godot/imported/BOTAORST.png-a1dded1590b34f8f0d736dd3c6d49d36.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/desk.png"
-dest_files=["res://.godot/imported/desk.png-47c441e9ad05fb6a016ffa429440318e.ctex"]
+source_file="res://assets/GAMEPLAY/HUD/BOTAORST.png"
+dest_files=["res://.godot/imported/BOTAORST.png-a1dded1590b34f8f0d736dd3c6d49d36.ctex"]
 
 [params]
 
