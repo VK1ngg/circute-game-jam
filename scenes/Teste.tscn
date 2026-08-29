@@ -11,6 +11,8 @@
 [ext_resource type="Texture2D" uid="uid://b3uvodqf57xp8" path="res://assets/GAMEPLAY/HUD/CLOCK.png" id="9_3jmak"]
 [ext_resource type="Texture2D" uid="uid://byvawknht1nnh" path="res://assets/GAMEPLAY/HUD/MULTIMETRO.png" id="10_qkdw7"]
 [ext_resource type="Texture2D" uid="uid://du6iujd5n5fki" path="res://assets/GAMEPLAY/HUD/PAUSESCREENBG.png" id="11_ci5gr"]
+[ext_resource type="Texture2D" uid="uid://dp7lx7jmdudl1" path="res://assets/GAMEPLAY/HUD/PAUSESCREENTEXT.png" id="12_qkdw7"]
+[ext_resource type="Texture2D" uid="uid://bl24h582ifkmf" path="res://assets/GAMEPLAY/HUD/PAUSESCREENBUTTON.png" id="13_ci5gr"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fl0r3"]
 
@@ -23,6 +25,8 @@
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ldkp4"]
 
 [node name="Teste" type="Node2D" unique_id=1359308894]
+position = Vector2(31, 26)
+scale = Vector2(0.941, 0.941)
 
 [node name="Mesa" type="Node2D" parent="." unique_id=388698699]
 position = Vector2(184, -101)
@@ -96,3 +100,13 @@ size_flags_vertical = 4
 position = Vector2(578, 324)
 scale = Vector2(0.95, 0.95)
 texture = ExtResource("11_ci5gr")
+
+[node name="Sprite2D" type="Sprite2D" parent="Pause" unique_id=454959810]
+position = Vector2(537, 339)
+texture = ExtResource("12_qkdw7")
+
+[node name="RESUME" type="Node2D" parent="Pause" unique_id=397679093]
+
+[node name="Sprite2D" type="Sprite2D" parent="Pause/RESUME" unique_id=382112612]
+position = Vector2(538, 346)
+texture = ExtResource("13_ci5gr")
