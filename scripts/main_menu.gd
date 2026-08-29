@@ -13,6 +13,7 @@ extends Control
 @onready var No = $No/No
 
 func _ready() -> void:
+<<<<<<< HEAD
 	$AnimationPlayer.play("Entering")
 
 func _on_button_mouse_entered() -> void:
@@ -35,6 +36,9 @@ func _on_quit_text_mouse_exited() -> void:
 
 func Start_pressed() -> void:
 	pass # Replace with function body.
+=======
+	pass
+>>>>>>> b56a3eeb927d64fe012584ebf7f49c060b17d3a0
 
 func Options_Pressed() -> void:
 	pass # Replace with function body.
