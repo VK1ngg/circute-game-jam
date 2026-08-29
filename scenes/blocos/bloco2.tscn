@@ -1,16 +1,13 @@
-[gd_scene format=3 uid="uid://css2oat4mdycw"]
+[gd_scene format=3 uid="uid://0meur163iqx0"]
 
-[ext_resource type="Script" uid="uid://6uicjbv6iyq4" path="res://scripts/bloco6.gd" id="1_dd7i4"]
-[ext_resource type="Texture2D" uid="uid://bscyc8n41tutf" path="res://icon.svg" id="2_8nikq"]
+[ext_resource type="Script" uid="uid://ckkbgum0637ji" path="res://scripts/blocos/bloco2.gd" id="1_dci40"]
+[ext_resource type="Texture2D" uid="uid://bscyc8n41tutf" path="res://icon.svg" id="1_us0xu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fl0r3"]
 size = Vector2(128, 128)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ral2h"]
-size = Vector2(19, 105)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_7131d"]
-size = Vector2(117, 14)
+size = Vector2(12.3125, 60)
 
 [sub_resource type="Animation" id="Animation_dci40"]
 length = 0.001
@@ -43,14 +40,14 @@ tracks/0/keys = {
 "values": [Color(1, 1, 1, 1), Color(1, 1, 0, 1), Color(1, 1, 1, 1)]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_dd7i4"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_esohu"]
 _data = {
 &"RESET": SubResource("Animation_dci40"),
 &"energizado": SubResource("Animation_nfbpx")
 }
 
-[node name="_" type="Area2D" unique_id=1190677186]
-script = ExtResource("1_dd7i4")
+[node name="_" type="Area2D" unique_id=1728586725]
+script = ExtResource("1_dci40")
 
 [node name="Area" type="CollisionShape2D" parent="." unique_id=566918265]
 position = Vector2(64, 64)
@@ -58,30 +55,30 @@ shape = SubResource("RectangleShape2D_fl0r3")
 
 [node name="Sprite" type="Sprite2D" parent="." unique_id=1524896028]
 position = Vector2(64, 64)
-texture = ExtResource("2_8nikq")
+texture = ExtResource("1_us0xu")
 
 [node name="Sprite2" type="Sprite2D" parent="." unique_id=2037910987]
 modulate = Color(0, 1, 0, 1)
-position = Vector2(64, 80)
-scale = Vector2(0.5, 0.75)
-texture = ExtResource("2_8nikq")
-
-[node name="Sprite3" type="Sprite2D" parent="." unique_id=1893642227]
-modulate = Color(0, 1, 0, 1)
-position = Vector2(80, 63)
-scale = Vector2(0.75, 0.5)
-texture = ExtResource("2_8nikq")
+position = Vector2(64, 66)
+scale = Vector2(1, 0.5)
+texture = ExtResource("1_us0xu")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=249524571]
 monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2052144550]
-position = Vector2(137.5, 64.5)
+position = Vector2(-5.84375, 66)
 shape = SubResource("RectangleShape2D_ral2h")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D" unique_id=728188290]
-position = Vector2(63.5, 135)
-shape = SubResource("RectangleShape2D_7131d")
+[node name="Area2D2" type="Area2D" parent="." unique_id=551860254]
+monitorable = false
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=646905340]
-libraries/ = SubResource("AnimationLibrary_dd7i4")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" unique_id=1457238917]
+position = Vector2(134.1875, 65)
+shape = SubResource("RectangleShape2D_ral2h")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1574483035]
+libraries/ = SubResource("AnimationLibrary_esohu")
+
+[connection signal="area_entered" from="Area2D" to="." method="energizar"]
+[connection signal="area_entered" from="Area2D2" to="." method="energizar"]

@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://wnud28m8f78l"]
+
+[ext_resource type="Texture2D" uid="uid://bscyc8n41tutf" path="res://icon.svg" id="1_v8wl2"]
+
+[node name="BaseBlock" type="Node2D" unique_id=1899162326]
+
+[node name="ConnectionArea" type="Area2D" parent="." unique_id=1515348935]
+
+[node name="BaseSprite" type="Sprite2D" parent="." unique_id=1645093644]
+position = Vector2(48, 48)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("1_v8wl2")
+metadata/_edit_group_ = true

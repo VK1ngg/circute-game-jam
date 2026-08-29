@@ -1,16 +1,16 @@
-[gd_scene format=3 uid="uid://bav4f3xe874qf"]
+[gd_scene format=3 uid="uid://css2oat4mdycw"]
 
-[ext_resource type="Script" uid="uid://f8ruo8oy8svv" path="res://scripts/bloco4.gd" id="1_ewp4b"]
-[ext_resource type="Texture2D" uid="uid://bscyc8n41tutf" path="res://icon.svg" id="2_e6ux7"]
+[ext_resource type="Script" uid="uid://6uicjbv6iyq4" path="res://scripts/blocos/bloco6.gd" id="1_dd7i4"]
+[ext_resource type="Texture2D" uid="uid://bscyc8n41tutf" path="res://icon.svg" id="2_8nikq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fl0r3"]
 size = Vector2(128, 128)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ral2h"]
-size = Vector2(14, 64)
+size = Vector2(19, 105)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7131d"]
-size = Vector2(63, 10)
+size = Vector2(117, 14)
 
 [sub_resource type="Animation" id="Animation_dci40"]
 length = 0.001
@@ -43,14 +43,14 @@ tracks/0/keys = {
 "values": [Color(1, 1, 1, 1), Color(1, 1, 0, 1), Color(1, 1, 1, 1)]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_ewp4b"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dd7i4"]
 _data = {
 &"RESET": SubResource("Animation_dci40"),
 &"energizado": SubResource("Animation_nfbpx")
 }
 
-[node name="_" type="Area2D" unique_id=2140648214]
-script = ExtResource("1_ewp4b")
+[node name="_" type="Area2D" unique_id=1190677186]
+script = ExtResource("1_dd7i4")
 
 [node name="Area" type="CollisionShape2D" parent="." unique_id=566918265]
 position = Vector2(64, 64)
@@ -58,32 +58,30 @@ shape = SubResource("RectangleShape2D_fl0r3")
 
 [node name="Sprite" type="Sprite2D" parent="." unique_id=1524896028]
 position = Vector2(64, 64)
-texture = ExtResource("2_e6ux7")
+texture = ExtResource("2_8nikq")
 
 [node name="Sprite2" type="Sprite2D" parent="." unique_id=2037910987]
 modulate = Color(0, 1, 0, 1)
-position = Vector2(64, 48)
+position = Vector2(64, 80)
 scale = Vector2(0.5, 0.75)
-texture = ExtResource("2_e6ux7")
+texture = ExtResource("2_8nikq")
 
 [node name="Sprite3" type="Sprite2D" parent="." unique_id=1893642227]
 modulate = Color(0, 1, 0, 1)
-position = Vector2(48, 66)
+position = Vector2(80, 63)
 scale = Vector2(0.75, 0.5)
-texture = ExtResource("2_e6ux7")
+texture = ExtResource("2_8nikq")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=249524571]
 monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2052144550]
-position = Vector2(-7, 66)
+position = Vector2(137.5, 64.5)
 shape = SubResource("RectangleShape2D_ral2h")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D" unique_id=1014607624]
-position = Vector2(64.5, -5)
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D" unique_id=728188290]
+position = Vector2(63.5, 135)
 shape = SubResource("RectangleShape2D_7131d")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=933685028]
-libraries/ = SubResource("AnimationLibrary_ewp4b")
-
-[connection signal="area_entered" from="Area2D" to="." method="energizar"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=646905340]
+libraries/ = SubResource("AnimationLibrary_dd7i4")

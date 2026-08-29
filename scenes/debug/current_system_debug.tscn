@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://d225rnv0storc"]
+
+[ext_resource type="PackedScene" uid="uid://b3stfmk6dgebp" path="res://scenes/blocos/bloco1.tscn" id="1_q8hqw"]
+[ext_resource type="PackedScene" uid="uid://0meur163iqx0" path="res://scenes/blocos/bloco2.tscn" id="2_6ccqa"]
+
+[node name="CurrentSystemDebug" type="Node2D" unique_id=1982827751]
+
+[node name="FonteEnergia" parent="." unique_id=2041450650 instance=ExtResource("1_q8hqw")]
+
+[node name="_" parent="." unique_id=1728586725 instance=ExtResource("2_6ccqa")]
+position = Vector2(128, 0)

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dkfow1ipyr5hl"]
 
-[ext_resource type="Script" uid="uid://s78dvrbjllrp" path="res://scripts/bloco3.gd" id="1_824iq"]
+[ext_resource type="Script" uid="uid://s78dvrbjllrp" path="res://scripts/blocos/bloco3.gd" id="1_824iq"]
 [ext_resource type="Texture2D" uid="uid://bscyc8n41tutf" path="res://icon.svg" id="2_fj11m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fl0r3"]
