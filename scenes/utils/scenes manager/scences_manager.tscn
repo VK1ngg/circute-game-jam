@@ -1,6 +1,11 @@
 [gd_scene format=3 uid="uid://c0vfxqh5hyjdi"]
 
+[ext_resource type="Script" uid="uid://bhyj6aan4afi1" path="res://scripts/utils/scenes manager/scenes_manager.gd" id="1_6dk84"]
+[ext_resource type="PackedScene" uid="uid://demqcytm636wn" path="res://scenes/Main Menu.tscn" id="2_6dk84"]
+
 [node name="ScencesManager" type="Node" unique_id=1383247078]
+script = ExtResource("1_6dk84")
+packed_control = ExtResource("2_6dk84")
 
 [node name="Scene2D" type="Node2D" parent="." unique_id=1246008248]
 
