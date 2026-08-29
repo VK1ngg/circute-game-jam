@@ -7,7 +7,7 @@
 size = Vector2(128, 128)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ral2h"]
-size = Vector2(45, 127)
+size = Vector2(12.3125, 60)
 
 [sub_resource type="Animation" id="Animation_dci40"]
 length = 0.001
@@ -46,11 +46,10 @@ _data = {
 &"energizado": SubResource("Animation_nfbpx")
 }
 
-[node name="_" type="StaticBody2D" unique_id=2041450650]
+[node name="_" type="Area2D" unique_id=1728586725]
 script = ExtResource("1_dci40")
 
 [node name="Area" type="CollisionShape2D" parent="." unique_id=566918265]
-visible = false
 position = Vector2(64, 64)
 shape = SubResource("RectangleShape2D_fl0r3")
 
@@ -60,24 +59,26 @@ texture = ExtResource("1_us0xu")
 
 [node name="Sprite2" type="Sprite2D" parent="." unique_id=2037910987]
 modulate = Color(0, 1, 0, 1)
-position = Vector2(64.5, 66)
-scale = Vector2(0.9921875, 0.5)
+position = Vector2(64, 66)
+scale = Vector2(1, 0.5)
 texture = ExtResource("1_us0xu")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=249524571]
+monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2052144550]
-position = Vector2(-31.5, 63.5)
+position = Vector2(-5.84375, 66)
 shape = SubResource("RectangleShape2D_ral2h")
 
 [node name="Area2D2" type="Area2D" parent="." unique_id=551860254]
+monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" unique_id=1457238917]
-position = Vector2(158, 64)
+position = Vector2(134.1875, 65)
 shape = SubResource("RectangleShape2D_ral2h")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1574483035]
 libraries/ = SubResource("AnimationLibrary_esohu")
 
-[connection signal="area_shape_entered" from="Area2D" to="." method="energizar"]
-[connection signal="area_shape_entered" from="Area2D2" to="." method="energizar"]
+[connection signal="area_entered" from="Area2D" to="." method="energizar"]
+[connection signal="area_entered" from="Area2D2" to="." method="energizar"]

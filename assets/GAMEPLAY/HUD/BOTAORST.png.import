@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cy0wt5ilp2au0"
-path="res://.godot/imported/main title.png-f740dfb21e0118cceb58d505d4337115.ctex"
+uid="uid://istthxi6siu6"
+path="res://.godot/imported/BOTAORST.png-a1dded1590b34f8f0d736dd3c6d49d36.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/main title.png"
-dest_files=["res://.godot/imported/main title.png-f740dfb21e0118cceb58d505d4337115.ctex"]
+source_file="res://assets/GAMEPLAY/HUD/BOTAORST.png"
+dest_files=["res://.godot/imported/BOTAORST.png-a1dded1590b34f8f0d736dd3c6d49d36.ctex"]
 
 [params]
 
