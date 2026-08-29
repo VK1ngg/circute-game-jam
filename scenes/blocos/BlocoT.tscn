@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://0dnmrau6fqi2"]
+
+[ext_resource type="Script" uid="uid://bnq0lfxeobqhi" path="res://scripts/blocos/BlocoT.gd" id="1_jfoye"]
+[ext_resource type="Texture2D" uid="uid://ccurxsmdachph" path="res://assets/GAMEPLAY/HUD/TILES.png" id="2_b26wp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7131d"]
+size = Vector2(36, 39)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ral2h"]
+size = Vector2(29.5, 108)
+
+[sub_resource type="Animation" id="Animation_dci40"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("_:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_nfbpx"]
+resource_name = "energizado"
+length = 5.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("_:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5, 3.5, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 0, 1), Color(1, 1, 0, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ewp4b"]
+_data = {
+&"RESET": SubResource("Animation_dci40"),
+&"energizado": SubResource("Animation_nfbpx")
+}
+
+[node name="BlocoL" type="Area2D" unique_id=2140648214]
+script = ExtResource("1_jfoye")
+
+[node name="_" type="Sprite2D" parent="." unique_id=1524896028]
+texture = ExtResource("2_b26wp")
+region_enabled = true
+region_rect = Rect2(672, 0, 96, 96)
+
+[node name="CS" type="CollisionShape2D" parent="." unique_id=1014607624]
+position = Vector2(33, -0.5)
+shape = SubResource("RectangleShape2D_7131d")
+
+[node name="CS2" type="CollisionShape2D" parent="." unique_id=2052144550]
+shape = SubResource("RectangleShape2D_ral2h")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=933685028]
+libraries/ = SubResource("AnimationLibrary_ewp4b")
+
+[connection signal="area_entered" from="." to="." method="energizar"]
+[connection signal="mouse_entered" from="." to="." method="mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="mouse_exited"]

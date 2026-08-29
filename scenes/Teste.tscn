@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://diufskali664g"]
+
+[ext_resource type="PackedScene" uid="uid://bqdrr30o8ks61" path="res://scenes/blocos/BlocoReto.tscn" id="1_qjden"]
+[ext_resource type="PackedScene" uid="uid://dehyjl1udu7ty" path="res://scenes/blocos/FonteEnergia.tscn" id="2_20svv"]
+[ext_resource type="PackedScene" uid="uid://bav4f3xe874qf" path="res://scenes/blocos/BlocoL.tscn" id="3_iar4u"]
+[ext_resource type="PackedScene" uid="uid://0dnmrau6fqi2" path="res://scenes/blocos/BlocoT.tscn" id="4_mg82l"]
+[ext_resource type="PackedScene" uid="uid://cq5rhdqk3togr" path="res://scenes/blocos/BlocoResistencia.tscn" id="5_mjud8"]
+[ext_resource type="PackedScene" uid="uid://ddo4k44xw6jhj" path="res://scenes/blocos/BlocoCapacitor.tscn" id="6_xjlet"]
+
+[node name="Node2D" type="Node2D" unique_id=1359308894]
+
+[node name="_" parent="." unique_id=1728586725 instance=ExtResource("1_qjden")]
+position = Vector2(230, 257)
+
+[node name="FonteEnergia" parent="." unique_id=1846498572 instance=ExtResource("2_20svv")]
+position = Vector2(132, 258)
+
+[node name="_2" parent="." unique_id=1158597934 instance=ExtResource("1_qjden")]
+position = Vector2(328, 256)
+
+[node name="BlocoL" parent="." unique_id=2140648214 instance=ExtResource("3_iar4u")]
+position = Vector2(425, 255)
+rotation = 1.5707964
+
+[node name="BlocoL2" parent="." unique_id=1729569189 instance=ExtResource("4_mg82l")]
+position = Vector2(425, 352)
+
+[node name="BlocoResistencia" parent="." unique_id=920659298 instance=ExtResource("5_mjud8")]
+position = Vector2(524, 352)
+
+[node name="BlocoResistencia2" parent="." unique_id=668896888 instance=ExtResource("6_xjlet")]
+position = Vector2(425, 449)
+rotation = 1.5707964
