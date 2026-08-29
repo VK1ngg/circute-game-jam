@@ -2,6 +2,9 @@
 
 [ext_resource type="PackedScene" uid="uid://0meur163iqx0" path="res://scenes/bloco2.tscn" id="1_3hls8"]
 [ext_resource type="PackedScene" uid="uid://dehyjl1udu7ty" path="res://scenes/fonte_energia.tscn" id="1_hbghi"]
+[ext_resource type="PackedScene" uid="uid://css2oat4mdycw" path="res://scenes/bloco6.tscn" id="3_rka8t"]
+[ext_resource type="PackedScene" uid="uid://o1f6yeo3033n" path="res://scenes/bloco5.tscn" id="4_5hph3"]
+[ext_resource type="PackedScene" uid="uid://bav4f3xe874qf" path="res://scenes/bloco4.tscn" id="5_j7kpp"]
 
 [node name="Level1" type="Node2D" unique_id=158150632]
 
@@ -16,3 +19,12 @@ position = Vector2(205, 254)
 
 [node name="_2" parent="." unique_id=1728586725 instance=ExtResource("1_3hls8")]
 position = Vector2(333, 254)
+
+[node name="_3" parent="." unique_id=1190677186 instance=ExtResource("3_rka8t")]
+position = Vector2(461, 126)
+
+[node name="_4" parent="." unique_id=550589229 instance=ExtResource("4_5hph3")]
+position = Vector2(589, 254)
+
+[node name="_5" parent="." unique_id=2140648214 instance=ExtResource("5_j7kpp")]
+position = Vector2(461, 254)
