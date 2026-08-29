@@ -23,16 +23,19 @@ func _ready() -> void:
 		scene_control_node.add_child(current_control_scene)
 		scenes_memory[current_control_scene.name] = current_control_scene
 
+## Delete scene from memory
 func delete_scene(scene: Node):
 	scene.queue_free()
 	scenes_memory.erase(scene.Name)
 
+## Remove scene and stops running, but keeps in memory
 func remove_scene(scene: Node):
 	scene.set_process(false)
 	scene.set_physics_process(false)
 	scene.set_process_input(false)
 	scene.visible = false
 
+## Hide scene and keeps running
 func hide_scene(scene: Node):
 	scene.visible = false
 
