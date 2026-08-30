@@ -16,7 +16,7 @@ func atualizar_rede(tree: SceneTree) -> void:
 			caminho.energia = true
 			fila.append(caminho)
 			visitados[caminho] = true
-			
+	
 	while fila.size() > 0:
 		var atual = fila.pop_front()
 		
@@ -27,3 +27,7 @@ func atualizar_rede(tree: SceneTree) -> void:
 					visitados[vizinho] = true
 					vizinho.energia = true
 					fila.append(vizinho)
+	
+	for caminho in todos_caminhos:
+		if (caminho.eh_capacitor or caminho.eh_resitor) and caminho.energia:
+			caminho.add_component_value()
