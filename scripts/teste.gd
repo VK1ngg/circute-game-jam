@@ -7,6 +7,10 @@ var tempo = 5
 @onready var label = $Contagemm
 @onready var timer = $Contagem
 
+const GOAL_RESISTENCE = 0
+const GOAL_CAPACITANCE = 0
+const GOAL_CURRENT = 220
+
 func _ready() -> void:
 	timer.autostart = true
 	timer.start()
@@ -16,6 +20,9 @@ func _process(_delta: float) -> void:
 	if tempo == 0:
 		Engine.time_scale = 0
 		game_over.show()
+	
+	if GOAL_RESISTENCE == EletricSystem.sum_resistence and GOAL_CAPACITANCE == EletricSystem.sum_capacitance and GOAL_CURRENT == EletricSystem.current:
+		print("vitoria")
 
 func _on_pause_button_pressed() -> void:
 	pauseMenu()
