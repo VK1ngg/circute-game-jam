@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://b4uuryfo7qf43"]
+
+[ext_resource type="Script" uid="uid://b6dmspx85skns" path="res://scripts/level_selection.gd" id="1_gswpo"]
+[ext_resource type="Theme" uid="uid://nh57wbsw3gpf" path="res://styles/button_theme.tres" id="1_u1g2d"]
+
+[node name="LevelSelection" type="Control" unique_id=1785763712]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gswpo")
+
+[node name="HSplitContainer" type="HSplitContainer" parent="." unique_id=1400560457]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -192.0
+offset_top = -25.0
+offset_right = 192.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+split_offsets = PackedInt32Array(0, 0, 0)
+
+[node name="Button" type="Button" parent="HSplitContainer" unique_id=488853747]
+layout_mode = 2
+theme = ExtResource("1_u1g2d")
+text = "Level 1"
+
+[node name="Button2" type="Button" parent="HSplitContainer" unique_id=762065164]
+layout_mode = 2
+theme = ExtResource("1_u1g2d")
+text = "Level 2"
+
+[node name="Button3" type="Button" parent="HSplitContainer" unique_id=976955157]
+layout_mode = 2
+theme = ExtResource("1_u1g2d")
+text = "Level 3"
+
+[node name="Button4" type="Button" parent="HSplitContainer" unique_id=1618011543]
+layout_mode = 2
+theme = ExtResource("1_u1g2d")
+text = "Teste"
+
+[connection signal="pressed" from="HSplitContainer/Button4" to="." method="_on_test_pressed"]
