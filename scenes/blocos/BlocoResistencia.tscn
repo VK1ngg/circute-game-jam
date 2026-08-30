@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://cq5rhdqk3togr"]
 
-[ext_resource type="Script" uid="uid://do7l4pr7wp8w8" path="res://scripts/blocos/BlocoResistencia.gd" id="1_b7oh7"]
+[ext_resource type="Script" uid="uid://dextotkc6ocog" path="res://scripts/blocos/Circuito.gd" id="1_b7oh7"]
 [ext_resource type="Texture2D" uid="uid://ccurxsmdachph" path="res://assets/GAMEPLAY/HUD/TILES.png" id="2_hiekg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ral2h"]
-size = Vector2(98, 53)
+size = Vector2(111, 53)
 
 [sub_resource type="Animation" id="Animation_dci40"]
 length = 0.001
@@ -61,7 +61,7 @@ _data = {
 &"energizado": SubResource("Animation_nfbpx")
 }
 
-[node name="BlocoResistencia" type="Area2D" unique_id=1728586725]
+[node name="BlocoResistencia" type="Area2D" unique_id=1728586725 groups=["caminhos"]]
 script = ExtResource("1_b7oh7")
 
 [node name="_" type="Sprite2D" parent="." unique_id=1524896028]
@@ -70,6 +70,7 @@ region_enabled = true
 region_rect = Rect2(384, 0, 96, 96)
 
 [node name="CS" type="CollisionShape2D" parent="." unique_id=2052144550]
+position = Vector2(-0.5, 0)
 shape = SubResource("RectangleShape2D_ral2h")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1574483035]
