@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://bysy6ww3ekwb" path="res://assets/GAMEPLAY/HUD/PAUSE.png" id="11_m1gbu"]
 [ext_resource type="Script" uid="uid://d4e8udqtg0wwg" path="res://scripts/pause_button.gd" id="12_yw4fb"]
 [ext_resource type="Script" uid="uid://dhn63vtetg6ma" path="res://scripts/retry_button.gd" id="13_1wpw8"]
+[ext_resource type="Texture2D" uid="uid://dbbnkjpm3lepg" path="res://assets/GAMEPLAY/HUD/BOTÕES/BOTAORST.png" id="14_tsmbm"]
 [ext_resource type="PackedScene" uid="uid://cg8admshrbapi" path="res://scenes/game_over.tscn" id="14_w1hcc"]
 
 [node name="Teste" type="Node2D" unique_id=1359308894]
@@ -151,10 +152,16 @@ texture_focused = ExtResource("11_m1gbu")
 script = ExtResource("12_yw4fb")
 
 [node name="RetryButton" type="TextureButton" parent="." unique_id=1238340949]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = -4.250797
+offset_top = 575.983
+offset_right = 131.7492
+offset_bottom = 711.983
 scale = Vector2(0.5, 0.5)
 pivot_offset_ratio = Vector2(0.5, 0.5)
+texture_normal = ExtResource("14_tsmbm")
+texture_pressed = ExtResource("14_tsmbm")
+texture_hover = ExtResource("14_tsmbm")
+texture_focused = ExtResource("14_tsmbm")
 script = ExtResource("13_1wpw8")
 
 [node name="Contagem" type="Timer" parent="." unique_id=667262089]
