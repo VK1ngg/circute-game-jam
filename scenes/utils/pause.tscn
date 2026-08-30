@@ -1,0 +1,115 @@
+[gd_scene format=3 uid="uid://dwn1mep3mo0d0"]
+
+[ext_resource type="Texture2D" uid="uid://du6iujd5n5fki" path="res://assets/GAMEPLAY/HUD/PAUSESCREENBG.png" id="1_7jrbl"]
+[ext_resource type="Script" uid="uid://d18sue3csuuvy" path="res://scenes/utils/pause.gd" id="1_fs2qn"]
+[ext_resource type="Texture2D" uid="uid://dp7lx7jmdudl1" path="res://assets/GAMEPLAY/HUD/PAUSESCREENTEXT.png" id="2_2b388"]
+[ext_resource type="Texture2D" uid="uid://bl24h582ifkmf" path="res://assets/GAMEPLAY/HUD/PAUSESCREENBUTTON.png" id="3_fs2qn"]
+[ext_resource type="Texture2D" uid="uid://bysy6ww3ekwb" path="res://assets/GAMEPLAY/HUD/PAUSE.png" id="4_2b388"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u3vqg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pgolf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q6dmw"]
+
+[node name="Pause" type="Control" unique_id=1840414320]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 51.0
+offset_bottom = 51.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_fs2qn")
+
+[node name="PauseBG" type="Sprite2D" parent="." unique_id=140621051]
+position = Vector2(600, 324)
+scale = Vector2(0.95, 0.95)
+texture = ExtResource("1_7jrbl")
+
+[node name="Pawse" type="Sprite2D" parent="." unique_id=1813790809]
+position = Vector2(600, 102.019)
+texture = ExtResource("2_2b388")
+
+[node name="ResumeBG" type="TextureButton" parent="." unique_id=1214832903]
+layout_mode = 1
+offset_left = 469.99997
+offset_top = 169.99998
+offset_right = 763.0
+offset_bottom = 267.0
+scale = Vector2(0.9, 0.9)
+texture_normal = ExtResource("3_fs2qn")
+texture_pressed = ExtResource("3_fs2qn")
+texture_hover = ExtResource("3_fs2qn")
+texture_focused = ExtResource("3_fs2qn")
+
+[node name="ResumeBG2" type="TextureButton" parent="." unique_id=1404675579]
+layout_mode = 0
+offset_left = 470.0
+offset_top = 280.0
+offset_right = 763.0
+offset_bottom = 377.0
+scale = Vector2(0.9, 0.9)
+texture_normal = ExtResource("3_fs2qn")
+texture_pressed = ExtResource("3_fs2qn")
+texture_hover = ExtResource("3_fs2qn")
+texture_focused = ExtResource("3_fs2qn")
+
+[node name="ResumeBG3" type="TextureButton" parent="." unique_id=1188983248]
+layout_mode = 0
+offset_left = 470.7758
+offset_top = 391.07333
+offset_right = 763.77576
+offset_bottom = 488.07333
+scale = Vector2(0.89999986, 0.89999986)
+texture_normal = ExtResource("3_fs2qn")
+texture_pressed = ExtResource("3_fs2qn")
+texture_hover = ExtResource("3_fs2qn")
+texture_focused = ExtResource("3_fs2qn")
+
+[node name="Resume" type="Label" parent="." unique_id=608269294]
+layout_mode = 0
+offset_left = 490.0
+offset_top = 170.0
+offset_right = 722.0
+offset_bottom = 253.0
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 60
+theme_override_styles/focus = SubResource("StyleBoxEmpty_u3vqg")
+text = "Resume"
+
+[node name="Options" type="Label" parent="." unique_id=528405397]
+layout_mode = 0
+offset_left = 505.0
+offset_top = 285.0
+offset_right = 696.0
+offset_bottom = 354.0
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 50
+theme_override_styles/focus = SubResource("StyleBoxEmpty_pgolf")
+text = "Options"
+
+[node name="Quit" type="Label" parent="." unique_id=1093014715]
+layout_mode = 0
+offset_left = 550.0
+offset_top = 395.0
+offset_right = 655.0
+offset_bottom = 464.0
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 50
+theme_override_styles/focus = SubResource("StyleBoxEmpty_q6dmw")
+text = "Quit"
+
+[node name="Button" type="TextureButton" parent="." unique_id=1284681051]
+layout_mode = 0
+offset_left = 1061.2568
+offset_top = 23.250795
+offset_right = 1203.2568
+offset_bottom = 165.2508
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("4_2b388")
+texture_pressed = ExtResource("4_2b388")
+texture_hover = ExtResource("4_2b388")
+texture_focused = ExtResource("4_2b388")
+
+[connection signal="mouse_entered" from="." to="." method="mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="mouse_exited"]
