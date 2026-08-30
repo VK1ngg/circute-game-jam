@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bav4f3xe874qf"]
 
-[ext_resource type="Script" uid="uid://f8ruo8oy8svv" path="res://scripts/blocos/BlocoL.gd" id="1_jcayw"]
+[ext_resource type="Script" uid="uid://dextotkc6ocog" path="res://scripts/blocos/Circuito.gd" id="1_jcayw"]
 [ext_resource type="Texture2D" uid="uid://ccurxsmdachph" path="res://assets/GAMEPLAY/HUD/TILES.png" id="2_nfctm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7131d"]
@@ -47,7 +47,7 @@ _data = {
 &"energizado": SubResource("Animation_nfbpx")
 }
 
-[node name="BlocoL" type="Area2D" unique_id=2140648214]
+[node name="BlocoL" type="Area2D" unique_id=2140648214 groups=["caminhos"]]
 script = ExtResource("1_jcayw")
 
 [node name="_" type="Sprite2D" parent="." unique_id=1524896028]
