@@ -1,16 +1,16 @@
-extends Block
+extends Area2D
 
+var energia = false
 @onready var sprite = $_
 
-func energizar(body: Node2D) -> void:
-	energize(body)
+func energizar(body: Node2D) -> void: body.energia = true
 
-func activate(line_string: String) -> void:
-	energy = true
-	line = line_string
+#func activate(line_string: String) -> void:
+	#energy = true
+	#line = line_string
 
 func _process(_delta: float) -> void:
-	if energy == true: $AnimationPlayer.play("energizado")
+	if energia == true: $AnimationPlayer.play("energizado")
 
 func _on_mouse_entered() -> void: sprite.scale = Vector2(1.05, 1.05)
 
