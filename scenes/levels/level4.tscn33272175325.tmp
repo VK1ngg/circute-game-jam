@@ -1,0 +1,178 @@
+[gd_scene format=3 uid="uid://bqa2ye54ox2w0"]
+
+[ext_resource type="Script" uid="uid://ca0hcspjbwds4" path="res://scripts/teste.gd" id="1_w24lh"]
+[ext_resource type="Texture2D" uid="uid://dfptbut3wdclt" path="res://assets/GAMEPLAY/desk.png" id="2_5sfmg"]
+[ext_resource type="PackedScene" uid="uid://dehyjl1udu7ty" path="res://scenes/blocos/FonteEnergia.tscn" id="3_tsmbm"]
+[ext_resource type="PackedScene" uid="uid://bqdrr30o8ks61" path="res://scenes/blocos/BlocoReto.tscn" id="4_y3vdi"]
+[ext_resource type="PackedScene" uid="uid://cq5rhdqk3togr" path="res://scenes/blocos/BlocoResistencia.tscn" id="5_irrt8"]
+[ext_resource type="PackedScene" uid="uid://bav4f3xe874qf" path="res://scenes/blocos/BlocoL.tscn" id="6_ev8xs"]
+[ext_resource type="PackedScene" uid="uid://0dnmrau6fqi2" path="res://scenes/blocos/BlocoT.tscn" id="7_5sfmg"]
+[ext_resource type="Texture2D" uid="uid://b3uvodqf57xp8" path="res://assets/GAMEPLAY/HUD/CLOCK.png" id="7_q6dln"]
+[ext_resource type="Texture2D" uid="uid://byvawknht1nnh" path="res://assets/GAMEPLAY/HUD/MULTIMETRO.png" id="8_qtppw"]
+[ext_resource type="Texture2D" uid="uid://beu6k7bf3pwt" path="res://assets/GAMEPLAY/HUD/LOBO STATES/LSTRESS.png" id="9_atlnk"]
+[ext_resource type="PackedScene" uid="uid://dwn1mep3mo0d0" path="res://scenes/utils/pause.tscn" id="10_7kkoh"]
+[ext_resource type="Texture2D" uid="uid://bysy6ww3ekwb" path="res://assets/GAMEPLAY/HUD/PAUSE.png" id="11_m1gbu"]
+[ext_resource type="Script" uid="uid://d4e8udqtg0wwg" path="res://scripts/pause_button.gd" id="12_yw4fb"]
+[ext_resource type="Script" uid="uid://dhn63vtetg6ma" path="res://scripts/retry_button.gd" id="13_1wpw8"]
+[ext_resource type="PackedScene" uid="uid://cg8admshrbapi" path="res://scenes/game_over.tscn" id="14_w1hcc"]
+
+[node name="Teste" type="Node2D" unique_id=1359308894]
+scale = Vector2(0.941, 0.941)
+script = ExtResource("1_w24lh")
+reset_path = "res://scenes/levels/level4.tscn"
+
+[node name="Mesa" type="Node2D" parent="." unique_id=388698699]
+position = Vector2(184, -101)
+
+[node name="BG" type="Sprite2D" parent="Mesa" unique_id=411277387]
+position = Vector2(429.17743, 449.5653)
+scale = Vector2(0.63906246, 0.6462963)
+texture = ExtResource("2_5sfmg")
+
+[node name="FonteEnergia" parent="Mesa" unique_id=1846498572 instance=ExtResource("3_tsmbm")]
+position = Vector2(370.729, 599.40594)
+
+[node name="_2" parent="Mesa" unique_id=1158597934 instance=ExtResource("4_y3vdi")]
+position = Vector2(270.83527, 599.40594)
+
+[node name="BlocoResistencia" parent="Mesa" unique_id=920659298 instance=ExtResource("5_irrt8")]
+position = Vector2(475.93628, 407.0574)
+
+[node name="BlocoL" parent="Mesa" unique_id=2140648214 instance=ExtResource("6_ev8xs")]
+position = Vector2(172.0043, 599.40594)
+rotation = 1.5707964
+
+[node name="_3" parent="Mesa" unique_id=1115947543 instance=ExtResource("4_y3vdi")]
+position = Vector2(467.43463, 599.4059)
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="_4" parent="Mesa" unique_id=959352654 instance=ExtResource("4_y3vdi")]
+position = Vector2(565.20294, 599.4059)
+scale = Vector2(0.9999999, 0.9999999)
+
+[node name="BlocoL3" parent="Mesa" unique_id=553430489 instance=ExtResource("6_ev8xs")]
+position = Vector2(674.661, 599.40594)
+rotation = 1.5707964
+
+[node name="_5" parent="Mesa" unique_id=819936790 instance=ExtResource("4_y3vdi")]
+position = Vector2(674.661, 504.8257)
+scale = Vector2(0.9999999, 0.9999999)
+
+[node name="BlocoL4" parent="Mesa" unique_id=742105379 instance=ExtResource("6_ev8xs")]
+position = Vector2(674.66095, 407.0574)
+rotation = 1.5707964
+
+[node name="_6" parent="Mesa" unique_id=914761952 instance=ExtResource("4_y3vdi")]
+position = Vector2(269.77258, 407.05737)
+
+[node name="BlocoResistencia3" parent="Mesa" unique_id=1799867123 instance=ExtResource("5_irrt8")]
+position = Vector2(269.77258, 307.16364)
+
+[node name="_7" parent="Mesa" unique_id=902746532 instance=ExtResource("4_y3vdi")]
+position = Vector2(172.00424, 504.82574)
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="BlocoL6" parent="Mesa" unique_id=499043905 instance=ExtResource("6_ev8xs")]
+position = Vector2(172.00424, 307.1637)
+rotation = 1.5707964
+
+[node name="BlocoL7" parent="Mesa" unique_id=1133112009 instance=ExtResource("6_ev8xs")]
+position = Vector2(674.66095, 307.1637)
+rotation = 1.5707964
+
+[node name="_9" parent="Mesa" unique_id=53569752 instance=ExtResource("4_y3vdi")]
+position = Vector2(571.57916, 307.16364)
+
+[node name="BlocoResistencia2" parent="Mesa" unique_id=1880145063 instance=ExtResource("5_irrt8")]
+position = Vector2(571.5792, 407.0574)
+
+[node name="BlocoL8" parent="Mesa" unique_id=330231887 instance=ExtResource("6_ev8xs")]
+position = Vector2(370.729, 407.0574)
+rotation = 1.5707964
+
+[node name="BlocoL9" parent="Mesa" unique_id=1622400034 instance=ExtResource("6_ev8xs")]
+position = Vector2(370.729, 504.82568)
+rotation = 1.5707964
+
+[node name="_8" parent="Mesa" unique_id=1728586725 instance=ExtResource("4_y3vdi")]
+position = Vector2(268.70987, 504.82568)
+
+[node name="_12" parent="Mesa" unique_id=1746195054 instance=ExtResource("4_y3vdi")]
+position = Vector2(474.87347, 504.8257)
+scale = Vector2(0.9999999, 0.9999999)
+
+[node name="_13" parent="Mesa" unique_id=29861758 instance=ExtResource("4_y3vdi")]
+position = Vector2(571.5791, 504.8257)
+scale = Vector2(0.9999999, 0.9999999)
+
+[node name="BlocoResistencia4" parent="Mesa" unique_id=1422333972 instance=ExtResource("5_irrt8")]
+position = Vector2(473.81088, 307.1637)
+
+[node name="BlocoL2" parent="Mesa" unique_id=322695513 instance=ExtResource("7_5sfmg")]
+position = Vector2(370.729, 307.16364)
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="BlocoL5" parent="Mesa" unique_id=135923688 instance=ExtResource("7_5sfmg")]
+position = Vector2(172.00426, 407.05737)
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="Relógio" type="Sprite2D" parent="." unique_id=1634044171]
+position = Vector2(104.14452, 238.04466)
+scale = Vector2(0.6, 0.7)
+texture = ExtResource("7_q6dln")
+
+[node name="Multímetro" type="Sprite2D" parent="." unique_id=186407304]
+position = Vector2(1086.0786, 505.84485)
+scale = Vector2(0.68, 0.68)
+texture = ExtResource("8_qtppw")
+
+[node name="Tempo" type="Sprite2D" parent="." unique_id=54201089]
+position = Vector2(491.93414, 274.1392)
+scale = Vector2(0.5137376, 0.47631562)
+texture = ExtResource("9_atlnk")
+
+[node name="Pause" parent="." unique_id=1840414320 instance=ExtResource("10_7kkoh")]
+visible = false
+scale = Vector2(1.06, 1.06)
+
+[node name="PauseButton" type="TextureButton" parent="." unique_id=1975204432]
+offset_left = 1102.0192
+offset_top = -14.877787
+offset_right = 1244.0192
+offset_bottom = 127.122215
+scale = Vector2(0.5, 0.5)
+pivot_offset_ratio = Vector2(0.5, 0.5)
+size_flags_horizontal = 0
+layout_direction = 1
+texture_normal = ExtResource("11_m1gbu")
+texture_pressed = ExtResource("11_m1gbu")
+texture_hover = ExtResource("11_m1gbu")
+texture_focused = ExtResource("11_m1gbu")
+script = ExtResource("12_yw4fb")
+
+[node name="RetryButton" type="TextureButton" parent="." unique_id=1238340949]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.5, 0.5)
+pivot_offset_ratio = Vector2(0.5, 0.5)
+script = ExtResource("13_1wpw8")
+
+[node name="Contagem" type="Timer" parent="." unique_id=667262089]
+autostart = true
+
+[node name="Contagemm" type="Label" parent="." unique_id=604627491]
+offset_left = 93.51753
+offset_top = 221.04143
+offset_right = 133.51753
+offset_bottom = 244.04143
+
+[node name="Game Over" parent="." unique_id=1032548336 instance=ExtResource("14_w1hcc")]
+visible = false
+
+[connection signal="mouse_entered" from="PauseButton" to="PauseButton" method="mouse_entered"]
+[connection signal="mouse_exited" from="PauseButton" to="PauseButton" method="mouse_exited"]
+[connection signal="pressed" from="PauseButton" to="." method="_on_pause_button_pressed"]
+[connection signal="mouse_entered" from="RetryButton" to="RetryButton" method="mouse_entered"]
+[connection signal="mouse_exited" from="RetryButton" to="RetryButton" method="mouse_exited"]
+[connection signal="pressed" from="RetryButton" to="." method="_on_retry_button_pressed"]
+[connection signal="timeout" from="Contagem" to="." method="timeout"]
