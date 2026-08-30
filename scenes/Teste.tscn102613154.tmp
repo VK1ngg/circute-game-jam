@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://cq5rhdqk3togr" path="res://scenes/blocos/BlocoResistencia.tscn" id="5_mjud8"]
 [ext_resource type="PackedScene" uid="uid://ddo4k44xw6jhj" path="res://scenes/blocos/BlocoCapacitor.tscn" id="6_xjlet"]
 [ext_resource type="Texture2D" uid="uid://dfptbut3wdclt" path="res://assets/GAMEPLAY/desk.png" id="7_20svv"]
-[ext_resource type="PackedScene" uid="uid://bav4f3xe874qf" path="res://scenes/blocos/BlocoL.tscn" id="7_mjud8"]
 [ext_resource type="Texture2D" uid="uid://b3uvodqf57xp8" path="res://assets/GAMEPLAY/HUD/CLOCK.png" id="9_3jmak"]
 [ext_resource type="PackedScene" uid="uid://dwn1mep3mo0d0" path="res://scenes/utils/pause.tscn" id="10_mjud8"]
 [ext_resource type="Texture2D" uid="uid://byvawknht1nnh" path="res://assets/GAMEPLAY/HUD/MULTIMETRO.png" id="10_qkdw7"]
@@ -129,9 +128,6 @@ position = Vector2(524, 352)
 [node name="BlocoResistencia2" parent="Mesa" unique_id=668896888 instance=ExtResource("6_xjlet")]
 position = Vector2(425, 449)
 rotation = 1.5707964
-
-[node name="BlocoL" parent="Mesa" unique_id=2140648214 instance=ExtResource("7_mjud8")]
-position = Vector2(427.05206, 254.02869)
 
 [node name="Relógio" type="Sprite2D" parent="." unique_id=1634044171]
 position = Vector2(169, 343)

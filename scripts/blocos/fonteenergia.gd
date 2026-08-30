@@ -1,10 +1,11 @@
 extends Area2D
 
 var energia = true
-var ENERGIA = true
+const ENERGIA = true
 
 func energizar(body: Node2D) -> void:
-	if energia == true: body.energia = true
+	body.energia = true
+	body.energizar(body)
 
 func desenergizar(body: Node2D):
 	body.energia -= 1
