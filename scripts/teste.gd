@@ -17,6 +17,7 @@ func _ready() -> void:
 	timer.start()
 
 func _process(_delta: float) -> void:
+	timer.autostart = true
 	label.text = str(tempo)
 	if tempo == 0:
 		Engine.time_scale = 0
