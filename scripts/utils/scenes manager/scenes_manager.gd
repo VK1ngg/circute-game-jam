@@ -75,7 +75,7 @@ func change_2d_scene(new_scene: String, mode: String = "delete"):
 		current_2d_scene = new
 		scene_2d_node.add_child(current_2d_scene)
 
-func change_control_scene(new_scene: String, mode: String = "delete"):
+func change_control_scene(new_scene: String, mode: String = "remove"):
 	match mode:
 		"delete":
 			# Delete da memória
@@ -92,14 +92,14 @@ func change_control_scene(new_scene: String, mode: String = "delete"):
 	if new_scene == "":
 		return
 	
-	var new = load(new_scene).instantiate()
+	#var new = load(new_scene).instantiate()
 	
-	if scenes_memory.has(new.name):
-		scenes_memory[new.name].set_process(true)
-		scenes_memory[new.name].set_physics_process(true)
-		scenes_memory[new.name].set_process_input(true)
-		scenes_memory[new.name].visible = true
-		new.queue_free()
-	else:
-		current_control_scene = new
-		scene_control_node.add_child(current_control_scene)
+	#if scenes_memory.has(new.name):
+	#	scenes_memory[new.name].set_process(true)
+	#	scenes_memory[new.name].set_physics_process(true)
+	#	scenes_memory[new.name].set_process_input(true)
+	#	scenes_memory[new.name].visible = true
+	#	new.queue_free()
+	#else:
+	#	current_control_scene = new
+	#	scene_control_node.add_child(current_control_scene)
