@@ -51,3 +51,9 @@ func get_vizinhos_conectados() -> Array[Caminho]:
 			vizinhos.append(area)
 			
 	return vizinhos
+
+func add_component_value() -> void:
+	if eh_resitor:
+		EletricSystem.resistences += 1
+	elif eh_capacitor:
+		EletricSystem.capacitances += 1
