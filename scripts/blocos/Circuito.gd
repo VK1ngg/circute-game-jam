@@ -10,7 +10,7 @@ var energia: bool = false:
 		energia = val
 		atualizar_animacao()
 
-@onready var sprite: Sprite2D = $Sprite2D 
+@onready var sprite: Sprite2D = $_
 
 func _ready() -> void:
 	add_to_group("caminhos")
@@ -40,6 +40,7 @@ func _on_mouse_exited() -> void:
 func _input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
 	if event.is_action_pressed("click") and not eh_fonte and not eh_resitor and not eh_capacitor:
 		rotation_degrees += 90
+		if rotation_degrees == 360: rotation_degrees = 0
 		CircuitsManager.atualizar_rede(get_tree())
 
 func get_vizinhos_conectados() -> Array[Caminho]:

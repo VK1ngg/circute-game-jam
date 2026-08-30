@@ -108,7 +108,7 @@ scale = Vector2(0.941, 0.941)
 position = Vector2(184, -101)
 
 [node name="BG" type="Sprite2D" parent="Mesa" unique_id=411277387]
-position = Vector2(429.17743, 450.62805)
+position = Vector2(429.17743, 449.5653)
 scale = Vector2(0.63906246, 0.6462963)
 texture = ExtResource("7_20svv")
 
@@ -149,7 +149,6 @@ texture = ExtResource("10_qkdw7")
 libraries/ = SubResource("AnimationLibrary_mg4rx")
 
 [node name="Pause" parent="." unique_id=1840414320 instance=ExtResource("10_mjud8")]
-visible = false
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=54201089]
 position = Vector2(491.93414, 274.1392)

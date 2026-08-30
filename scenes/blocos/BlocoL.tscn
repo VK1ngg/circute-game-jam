@@ -71,5 +71,5 @@ libraries/ = SubResource("AnimationLibrary_ewp4b")
 [connection signal="area_entered" from="." to="." method="energizar"]
 [connection signal="area_exited" from="." to="." method="desenergizar"]
 [connection signal="input_event" from="." to="." method="input_event"]
-[connection signal="mouse_entered" from="." to="." method="mouse_entered"]
-[connection signal="mouse_exited" from="." to="." method="mouse_exited"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
