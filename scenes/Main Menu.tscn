@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://crqp3cuv4jxeq" path="res://scripts/main_menu.gd" id="1_ism2r"]
 [ext_resource type="Texture2D" uid="uid://dd4cfomgpy0cw" path="res://assets/MAIN TITLE/white.png" id="2_ism2r"]
 [ext_resource type="Texture2D" uid="uid://c3vgw0qri68wa" path="res://assets/MAIN TITLE/play and settings button.png" id="2_qgd8p"]
+[ext_resource type="AudioStream" uid="uid://jvek47bc7yy6" path="res://assets/Resist.ogg" id="5_estw7"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ism2r"]
 
@@ -676,6 +677,10 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_04aus")
 disabled = true
 text = "No
 "
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=89142961]
+stream = ExtResource("5_estw7")
+autoplay = true
 
 [connection signal="mouse_entered" from="Start/Start" to="." method="_on_button_mouse_entered"]
 [connection signal="mouse_exited" from="Start/Start" to="." method="_on_button_mouse_exited"]
