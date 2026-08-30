@@ -1,3 +1,4 @@
+class_name ScenesManager
 extends Node
 
 @export_group("Scenes")
@@ -8,10 +9,13 @@ extends Node
 @onready var scene_2d_node: Node2D = get_node("Scene2D")
 @onready var scene_control_node: Control = get_node("ScenceControl")
 
+static var Instance: ScenesManager
 var current_2d_scene: Node2D
 var current_control_scene: Control
 
 func _ready() -> void:
+	Instance = self
+	
 	if not packed_2d == null:
 		current_2d_scene = packed_2d.instantiate()
 		scene_2d_node.add_child(current_2d_scene)
@@ -26,7 +30,7 @@ func _ready() -> void:
 ## Delete scene from memory
 func delete_scene(scene: Node):
 	scene.queue_free()
-	scenes_memory.erase(scene.Name)
+	scenes_memory.erase(scene.name)
 
 ## Remove scene and stops running, but keeps in memory
 func remove_scene(scene: Node):
@@ -53,6 +57,9 @@ func change_2d_scene(new_scene: String, mode: String = "delete"):
 		_:
 			printerr("${mode} not found!")
 	
+	if new_scene == "":
+		return
+	
 	var new = load(new_scene).instantiate()
 	
 	if scenes_memory.has(new.name):
@@ -62,7 +69,8 @@ func change_2d_scene(new_scene: String, mode: String = "delete"):
 		scenes_memory[new.name].visible = true
 		new.queue_free()
 	else:
-		current_2d_scene.add_child(new)
+		current_2d_scene = new
+		scene_2d_node.add_child(current_2d_scene)
 
 func change_control_scene(new_scene: String, mode: String = "delete"):
 	match mode:
@@ -78,6 +86,9 @@ func change_control_scene(new_scene: String, mode: String = "delete"):
 		_:
 			printerr("${mode} not found!")
 	
+	if new_scene == "":
+		return
+	
 	var new = load(new_scene).instantiate()
 	
 	if scenes_memory.has(new.name):
@@ -87,4 +98,5 @@ func change_control_scene(new_scene: String, mode: String = "delete"):
 		scenes_memory[new.name].visible = true
 		new.queue_free()
 	else:
-		current_control_scene.add_child(new)
+		current_control_scene = new
+		scene_control_node.add_child(current_control_scene)

@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://b4uuryfo7qf43"]
+
+[ext_resource type="Theme" uid="uid://nh57wbsw3gpf" path="res://styles/button_theme.tres" id="1_u1g2d"]
+
+[node name="LevelSelection" type="Control" unique_id=1785763712]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HSplitContainer" type="HSplitContainer" parent="." unique_id=1400560457]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="HSplitContainer" unique_id=488853747]
+layout_mode = 2
+theme = ExtResource("1_u1g2d")
+text = "Level 1"
+
+[node name="Button2" type="Button" parent="HSplitContainer" unique_id=762065164]
+layout_mode = 2
+theme = ExtResource("1_u1g2d")
+text = "Level 2"
