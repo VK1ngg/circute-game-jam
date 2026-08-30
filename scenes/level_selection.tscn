@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://b4uuryfo7qf43"]
 
+[ext_resource type="Script" uid="uid://b6dmspx85skns" path="res://scripts/level_selection.gd" id="1_gswpo"]
 [ext_resource type="Theme" uid="uid://nh57wbsw3gpf" path="res://styles/button_theme.tres" id="1_u1g2d"]
 
 [node name="LevelSelection" type="Control" unique_id=1785763712]
@@ -9,6 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_gswpo")
 
 [node name="HSplitContainer" type="HSplitContainer" parent="." unique_id=1400560457]
 layout_mode = 1
@@ -23,7 +25,7 @@ offset_right = 192.0
 offset_bottom = 25.0
 grow_horizontal = 2
 grow_vertical = 2
-split_offsets = PackedInt32Array(0, 0)
+split_offsets = PackedInt32Array(0, 0, 0)
 
 [node name="Button" type="Button" parent="HSplitContainer" unique_id=488853747]
 layout_mode = 2
@@ -39,3 +41,10 @@ text = "Level 2"
 layout_mode = 2
 theme = ExtResource("1_u1g2d")
 text = "Level 3"
+
+[node name="Button4" type="Button" parent="HSplitContainer" unique_id=1618011543]
+layout_mode = 2
+theme = ExtResource("1_u1g2d")
+text = "Teste"
+
+[connection signal="pressed" from="HSplitContainer/Button4" to="." method="_on_test_pressed"]

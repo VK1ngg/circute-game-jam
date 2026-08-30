@@ -29,11 +29,13 @@ func _ready() -> void:
 
 ## Delete scene from memory
 func delete_scene(scene: Node):
+	if scene == null: return
 	scene.queue_free()
 	scenes_memory.erase(scene.name)
 
 ## Remove scene and stops running, but keeps in memory
 func remove_scene(scene: Node):
+	if scene == null: return
 	scene.set_process(false)
 	scene.set_physics_process(false)
 	scene.set_process_input(false)
@@ -41,6 +43,7 @@ func remove_scene(scene: Node):
 
 ## Hide scene and keeps running
 func hide_scene(scene: Node):
+	if scene == null: return
 	scene.visible = false
 
 func change_2d_scene(new_scene: String, mode: String = "delete"):
