@@ -13,7 +13,7 @@ axis_stretch_horizontal = 2
 
 [resource]
 Button/colors/font_hover_color = Color(1, 1, 0, 1)
-Button/constants/outline_size = 12
+Button/constants/outline_size = 10
 Button/font_sizes/font_size = 60
 Button/styles/hover = SubResource("StyleBoxTexture_7w6ge")
 Button/styles/normal = SubResource("StyleBoxTexture_uxfeh")
