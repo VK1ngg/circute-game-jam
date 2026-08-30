@@ -34,7 +34,7 @@ func _on_quit_text_mouse_exited() -> void:
 	BrancoQuit.visible = false
 
 func Start_pressed() -> void:
-	pass # Replace with function body.
+	ScenesManager.Instance.change_control_scene("res://scenes/level_selection.tscn")
 
 func Options_Pressed() -> void:
 	pass # Replace with function body.
