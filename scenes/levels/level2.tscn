@@ -15,6 +15,7 @@
 [ext_resource type="Script" uid="uid://dhn63vtetg6ma" path="res://scripts/retry_button.gd" id="13_xidjn"]
 [ext_resource type="PackedScene" uid="uid://cg8admshrbapi" path="res://scenes/game_over.tscn" id="14_45jfw"]
 [ext_resource type="Texture2D" uid="uid://dbbnkjpm3lepg" path="res://assets/GAMEPLAY/HUD/BOTÕES/BOTAORST.png" id="14_hkuam"]
+[ext_resource type="PackedScene" uid="uid://dhmp2o7bhmt24" path="res://scenes/VICTORY.tscn" id="16_f3b2k"]
 
 [node name="Teste" type="Node2D" unique_id=1359308894]
 scale = Vector2(0.941, 0.941)
@@ -157,6 +158,9 @@ texture_pressed = ExtResource("14_hkuam")
 texture_hover = ExtResource("14_hkuam")
 texture_focused = ExtResource("14_hkuam")
 script = ExtResource("13_xidjn")
+
+[node name="Victory" parent="." unique_id=290996831 instance=ExtResource("16_f3b2k")]
+visible = false
 
 [connection signal="mouse_entered" from="PauseButton" to="PauseButton" method="mouse_entered"]
 [connection signal="mouse_exited" from="PauseButton" to="PauseButton" method="mouse_exited"]

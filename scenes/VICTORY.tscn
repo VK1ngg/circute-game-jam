@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://dhmp2o7bhmt24"]
+
+[ext_resource type="Script" uid="uid://d2bnwn763vhgv" path="res://scenes/victory.gd" id="1_80d6v"]
+[ext_resource type="Texture2D" uid="uid://bl24h582ifkmf" path="res://assets/GAMEPLAY/HUD/PAUSESCREENBUTTON.png" id="2_17wji"]
+[ext_resource type="Texture2D" uid="uid://ctvoirfncfidu" path="res://assets/GAMEPLAY/HUD/END_LVL/CIRCUIT closed.png" id="3_80d6v"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wqhvx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tbwuq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_racf3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7m3ot"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v3hpu"]
+
+[node name="Victory" type="Control" unique_id=1032548336]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_80d6v")
+
+[node name="Quit" type="Button" parent="." unique_id=1438187334]
+layout_mode = 0
+offset_left = 430.00006
+offset_top = 481.0
+offset_right = 731.00006
+offset_bottom = 586.0
+scale = Vector2(0.9, 0.9)
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_wqhvx")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_tbwuq")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_racf3")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_7m3ot")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_v3hpu")
+icon = ExtResource("2_17wji")
+
+[node name="_" type="Sprite2D" parent="." unique_id=2044219580]
+position = Vector2(557, 286)
+texture = ExtResource("3_80d6v")
+
+[node name="Quit2" type="Label" parent="." unique_id=458289815]
+layout_mode = 0
+offset_left = 508.00006
+offset_top = 489.0
+offset_right = 634.00006
+offset_bottom = 572.0
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 60
+text = "Quit"
+
+[connection signal="mouse_entered" from="Quit" to="." method="quit_mouse_entered"]
+[connection signal="mouse_exited" from="Quit" to="." method="quit_mouse_exited"]
+[connection signal="pressed" from="Quit" to="." method="quit_pressed"]

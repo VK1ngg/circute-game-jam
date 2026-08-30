@@ -2,7 +2,8 @@ extends Node2D
 
 @onready var pause_menu = $Pause
 @onready var game_over = $"Game Over"
-var paused = true
+@onready var victory = $Victory
+var paused = false
 var tempo = 30
 @onready var label = $Contagemm
 @onready var timer = $Contagem
@@ -24,7 +25,7 @@ func _process(_delta: float) -> void:
 		game_over.show()
 	
 	if goal_resistence == EletricSystem.sum_resistence and goal_capacitance == EletricSystem.sum_capacitance and goal_current == EletricSystem.current:
-		print("vitoria")
+		victory.show()
 
 func _on_pause_button_pressed() -> void:
 	pauseMenu()

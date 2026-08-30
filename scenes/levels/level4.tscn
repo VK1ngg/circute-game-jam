@@ -16,6 +16,7 @@
 [ext_resource type="Script" uid="uid://dhn63vtetg6ma" path="res://scripts/retry_button.gd" id="13_1wpw8"]
 [ext_resource type="Texture2D" uid="uid://dbbnkjpm3lepg" path="res://assets/GAMEPLAY/HUD/BOTÕES/BOTAORST.png" id="14_tsmbm"]
 [ext_resource type="PackedScene" uid="uid://cg8admshrbapi" path="res://scenes/game_over.tscn" id="14_w1hcc"]
+[ext_resource type="PackedScene" uid="uid://dhmp2o7bhmt24" path="res://scenes/VICTORY.tscn" id="17_y3vdi"]
 
 [node name="Teste" type="Node2D" unique_id=1359308894]
 scale = Vector2(0.941, 0.941)
@@ -174,6 +175,9 @@ offset_right = 133.51753
 offset_bottom = 244.04143
 
 [node name="Game Over" parent="." unique_id=1032548336 instance=ExtResource("14_w1hcc")]
+visible = false
+
+[node name="Victory" parent="." unique_id=1151102322 instance=ExtResource("17_y3vdi")]
 visible = false
 
 [connection signal="mouse_entered" from="PauseButton" to="PauseButton" method="mouse_entered"]
