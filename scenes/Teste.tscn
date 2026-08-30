@@ -158,6 +158,7 @@ scale = Vector2(0.5137376, 0.47631562)
 texture = ExtResource("11_xjlet")
 
 [node name="Pause" parent="." unique_id=1840414320 instance=ExtResource("10_mjud8")]
+visible = false
 scale = Vector2(1.06, 1.06)
 
 [node name="PauseButton" type="TextureButton" parent="." unique_id=1975204432]

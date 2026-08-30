@@ -1,7 +1,7 @@
 extends Node2D
 
 @onready var pause_menu = $Pause
-var paused = false
+var paused = true
 
 func _on_pause_button_pressed() -> void:
 	pauseMenu()

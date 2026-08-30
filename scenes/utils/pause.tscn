@@ -82,3 +82,4 @@ text = "Quit"
 [connection signal="pressed" from="ResumeBG" to="." method="resume_pressed"]
 [connection signal="mouse_entered" from="QuitBG" to="." method="quit_mouse_entered"]
 [connection signal="mouse_exited" from="QuitBG" to="." method="quit_mouse_exited"]
+[connection signal="pressed" from="QuitBG" to="." method="quit_pressed"]
