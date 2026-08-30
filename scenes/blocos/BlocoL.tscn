@@ -35,10 +35,10 @@ tracks/0/path = NodePath("_:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.5, 3.5),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 1.5, 3.5, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 0, 1), Color(1, 1, 0, 1)]
+"values": [Color(1, 1, 1, 1), Color(1, 1, 0, 1), Color(1, 1, 0, 1), Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ewp4b"]
@@ -67,5 +67,6 @@ shape = SubResource("RectangleShape2D_ral2h")
 libraries/ = SubResource("AnimationLibrary_ewp4b")
 
 [connection signal="area_entered" from="." to="." method="energizar"]
+[connection signal="input_event" from="." to="." method="input_event"]
 [connection signal="mouse_entered" from="." to="." method="mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="mouse_exited"]
