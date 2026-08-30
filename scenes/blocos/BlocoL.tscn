@@ -6,9 +6,6 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7131d"]
 size = Vector2(70, 42)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ral2h"]
-size = Vector2(40, 38)
-
 [sub_resource type="Animation" id="Animation_dci40"]
 length = 0.001
 tracks/0/type = "value"
@@ -47,6 +44,9 @@ _data = {
 &"energizado": SubResource("Animation_nfbpx")
 }
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ral2h"]
+size = Vector2(40, 38)
+
 [node name="BlocoL" type="Area2D" unique_id=2140648214]
 script = ExtResource("1_jcayw")
 
@@ -59,14 +59,17 @@ region_rect = Rect2(96, 0, 96, 96)
 position = Vector2(15, 0)
 shape = SubResource("RectangleShape2D_7131d")
 
-[node name="CS2" type="CollisionShape2D" parent="." unique_id=2052144550]
-position = Vector2(0, 40)
-shape = SubResource("RectangleShape2D_ral2h")
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=933685028]
 libraries/ = SubResource("AnimationLibrary_ewp4b")
 
+[node name="Area2D" type="Area2D" parent="." unique_id=393763127]
+
+[node name="CS2" type="CollisionShape2D" parent="Area2D" unique_id=2052144550]
+position = Vector2(0, 40)
+shape = SubResource("RectangleShape2D_ral2h")
+
 [connection signal="area_entered" from="." to="." method="energizar"]
+[connection signal="area_exited" from="." to="." method="desenergizar"]
 [connection signal="input_event" from="." to="." method="input_event"]
 [connection signal="mouse_entered" from="." to="." method="mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="mouse_exited"]

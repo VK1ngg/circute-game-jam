@@ -76,3 +76,4 @@ shape = SubResource("RectangleShape2D_ral2h")
 libraries/ = SubResource("AnimationLibrary_esohu")
 
 [connection signal="area_entered" from="." to="." method="energizar"]
+[connection signal="area_exited" from="." to="." method="desenergizar"]

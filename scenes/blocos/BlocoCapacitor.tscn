@@ -61,7 +61,7 @@ _data = {
 &"energizado": SubResource("Animation_nfbpx")
 }
 
-[node name="BlocoResistencia" type="Area2D" unique_id=1728586725]
+[node name="BlocoCapacitor" type="Area2D" unique_id=1728586725]
 script = ExtResource("1_vg3vb")
 
 [node name="_" type="Sprite2D" parent="." unique_id=1524896028]
@@ -76,3 +76,4 @@ shape = SubResource("RectangleShape2D_ral2h")
 libraries/ = SubResource("AnimationLibrary_esohu")
 
 [connection signal="area_entered" from="." to="." method="energizar"]
+[connection signal="area_exited" from="." to="." method="desenergizar"]
