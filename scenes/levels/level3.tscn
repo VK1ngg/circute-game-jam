@@ -13,7 +13,9 @@
 [ext_resource type="Texture2D" uid="uid://bysy6ww3ekwb" path="res://assets/GAMEPLAY/HUD/PAUSE.png" id="11_fhpi3"]
 [ext_resource type="Script" uid="uid://d4e8udqtg0wwg" path="res://scripts/pause_button.gd" id="12_db4wd"]
 [ext_resource type="Script" uid="uid://dhn63vtetg6ma" path="res://scripts/retry_button.gd" id="13_yc51k"]
+[ext_resource type="Texture2D" uid="uid://dbbnkjpm3lepg" path="res://assets/GAMEPLAY/HUD/BOTÕES/BOTAORST.png" id="14_a82vw"]
 [ext_resource type="PackedScene" uid="uid://cg8admshrbapi" path="res://scenes/game_over.tscn" id="14_ojkn5"]
+[ext_resource type="PackedScene" uid="uid://dhmp2o7bhmt24" path="res://scenes/VICTORY.tscn" id="16_t14x3"]
 
 [node name="Teste" type="Node2D" unique_id=1359308894]
 scale = Vector2(0.941, 0.941)
@@ -121,13 +123,6 @@ texture_hover = ExtResource("11_fhpi3")
 texture_focused = ExtResource("11_fhpi3")
 script = ExtResource("12_db4wd")
 
-[node name="RetryButton" type="TextureButton" parent="." unique_id=1238340949]
-offset_right = 40.0
-offset_bottom = 40.0
-scale = Vector2(0.5, 0.5)
-pivot_offset_ratio = Vector2(0.5, 0.5)
-script = ExtResource("13_yc51k")
-
 [node name="Contagem" type="Timer" parent="." unique_id=667262089]
 autostart = true
 
@@ -140,10 +135,25 @@ offset_bottom = 244.04143
 [node name="Game Over" parent="." unique_id=1032548336 instance=ExtResource("14_ojkn5")]
 visible = false
 
+[node name="RetryButton" type="TextureButton" parent="." unique_id=1518477195]
+offset_left = -4.250797
+offset_top = 575.983
+offset_right = 131.7492
+offset_bottom = 711.983
+scale = Vector2(0.5, 0.5)
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture_normal = ExtResource("14_a82vw")
+texture_pressed = ExtResource("14_a82vw")
+texture_hover = ExtResource("14_a82vw")
+texture_focused = ExtResource("14_a82vw")
+script = ExtResource("13_yc51k")
+
+[node name="Victory" parent="." unique_id=624006554 instance=ExtResource("16_t14x3")]
+visible = false
+
 [connection signal="mouse_entered" from="PauseButton" to="PauseButton" method="mouse_entered"]
 [connection signal="mouse_exited" from="PauseButton" to="PauseButton" method="mouse_exited"]
 [connection signal="pressed" from="PauseButton" to="." method="_on_pause_button_pressed"]
+[connection signal="timeout" from="Contagem" to="." method="timeout"]
 [connection signal="mouse_entered" from="RetryButton" to="RetryButton" method="mouse_entered"]
 [connection signal="mouse_exited" from="RetryButton" to="RetryButton" method="mouse_exited"]
-[connection signal="pressed" from="RetryButton" to="." method="_on_retry_button_pressed"]
-[connection signal="timeout" from="Contagem" to="." method="timeout"]
