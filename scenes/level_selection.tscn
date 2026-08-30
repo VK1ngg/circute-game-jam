@@ -20,10 +20,10 @@ texture = ExtResource("2_3rh63")
 
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=2043993245]
 layout_mode = 1
-offset_left = 345.0
-offset_top = 370.0
-offset_right = 811.0
-offset_bottom = 420.0
+offset_left = 47.0
+offset_top = 134.0
+offset_right = 397.0
+offset_bottom = 217.0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer" unique_id=1665114178]
 layout_mode = 2
@@ -32,17 +32,17 @@ alignment = 1
 [node name="Button" type="Button" parent="CenterContainer/HBoxContainer" unique_id=488853747]
 layout_mode = 2
 theme = ExtResource("1_u1g2d")
-text = "Level 1"
+text = "1"
 
 [node name="Button2" type="Button" parent="CenterContainer/HBoxContainer" unique_id=762065164]
 layout_mode = 2
 theme = ExtResource("1_u1g2d")
-text = "Level 2"
+text = "2"
 
 [node name="Button3" type="Button" parent="CenterContainer/HBoxContainer" unique_id=976955157]
 layout_mode = 2
 theme = ExtResource("1_u1g2d")
-text = "Level 3"
+text = "3"
 
 [node name="Button4" type="Button" parent="CenterContainer/HBoxContainer" unique_id=1618011543]
 layout_mode = 2
