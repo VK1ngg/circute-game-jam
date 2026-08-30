@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://diufskali664g"]
 
+[ext_resource type="Script" uid="uid://ca0hcspjbwds4" path="res://scripts/teste.gd" id="1_ci5gr"]
 [ext_resource type="PackedScene" uid="uid://bqdrr30o8ks61" path="res://scenes/blocos/BlocoReto.tscn" id="1_qjden"]
 [ext_resource type="PackedScene" uid="uid://dehyjl1udu7ty" path="res://scenes/blocos/FonteEnergia.tscn" id="2_20svv"]
 [ext_resource type="PackedScene" uid="uid://0dnmrau6fqi2" path="res://scenes/blocos/BlocoT.tscn" id="4_mg82l"]
@@ -11,6 +12,8 @@
 [ext_resource type="PackedScene" uid="uid://dwn1mep3mo0d0" path="res://scenes/utils/pause.tscn" id="10_mjud8"]
 [ext_resource type="Texture2D" uid="uid://byvawknht1nnh" path="res://assets/GAMEPLAY/HUD/MULTIMETRO.png" id="10_qkdw7"]
 [ext_resource type="Texture2D" uid="uid://beu6k7bf3pwt" path="res://assets/GAMEPLAY/HUD/LOBO STATES/LSTRESS.png" id="11_xjlet"]
+[ext_resource type="Texture2D" uid="uid://bysy6ww3ekwb" path="res://assets/GAMEPLAY/HUD/PAUSE.png" id="12_3jmak"]
+[ext_resource type="Script" uid="uid://d4e8udqtg0wwg" path="res://scripts/pause_button.gd" id="13_qkdw7"]
 
 [sub_resource type="Animation" id="Animation_qkdw7"]
 resource_name = "DesPause"
@@ -103,6 +106,7 @@ _data = {
 
 [node name="Teste" type="Node2D" unique_id=1359308894]
 scale = Vector2(0.941, 0.941)
+script = ExtResource("1_ci5gr")
 
 [node name="Mesa" type="Node2D" parent="." unique_id=388698699]
 position = Vector2(184, -101)
@@ -148,9 +152,30 @@ texture = ExtResource("10_qkdw7")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=927930365]
 libraries/ = SubResource("AnimationLibrary_mg4rx")
 
-[node name="Pause" parent="." unique_id=1840414320 instance=ExtResource("10_mjud8")]
-
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=54201089]
 position = Vector2(491.93414, 274.1392)
 scale = Vector2(0.5137376, 0.47631562)
 texture = ExtResource("11_xjlet")
+
+[node name="Pause" parent="." unique_id=1840414320 instance=ExtResource("10_mjud8")]
+visible = false
+scale = Vector2(1.06, 1.06)
+
+[node name="PauseButton" type="TextureButton" parent="." unique_id=1975204432]
+offset_left = 1102.0192
+offset_top = -14.877787
+offset_right = 1244.0192
+offset_bottom = 127.122215
+scale = Vector2(0.5, 0.5)
+pivot_offset_ratio = Vector2(0.5, 0.5)
+size_flags_horizontal = 0
+layout_direction = 1
+texture_normal = ExtResource("12_3jmak")
+texture_pressed = ExtResource("12_3jmak")
+texture_hover = ExtResource("12_3jmak")
+texture_focused = ExtResource("12_3jmak")
+script = ExtResource("13_qkdw7")
+
+[connection signal="mouse_entered" from="PauseButton" to="PauseButton" method="mouse_entered"]
+[connection signal="mouse_exited" from="PauseButton" to="PauseButton" method="mouse_exited"]
+[connection signal="pressed" from="PauseButton" to="." method="_on_pause_button_pressed"]
