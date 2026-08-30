@@ -1,0 +1,160 @@
+[gd_scene format=3 uid="uid://ovrqwstkrfok"]
+
+[ext_resource type="Script" uid="uid://ca0hcspjbwds4" path="res://scripts/teste.gd" id="1_b4tpv"]
+[ext_resource type="Texture2D" uid="uid://dfptbut3wdclt" path="res://assets/GAMEPLAY/desk.png" id="2_hkuam"]
+[ext_resource type="PackedScene" uid="uid://bqdrr30o8ks61" path="res://scenes/blocos/BlocoReto.tscn" id="3_f3b2k"]
+[ext_resource type="PackedScene" uid="uid://dehyjl1udu7ty" path="res://scenes/blocos/FonteEnergia.tscn" id="4_sqrei"]
+[ext_resource type="PackedScene" uid="uid://cq5rhdqk3togr" path="res://scenes/blocos/BlocoResistencia.tscn" id="5_yhrca"]
+[ext_resource type="PackedScene" uid="uid://bav4f3xe874qf" path="res://scenes/blocos/BlocoL.tscn" id="6_4eecq"]
+[ext_resource type="Texture2D" uid="uid://b3uvodqf57xp8" path="res://assets/GAMEPLAY/HUD/CLOCK.png" id="7_b3p8y"]
+[ext_resource type="Texture2D" uid="uid://byvawknht1nnh" path="res://assets/GAMEPLAY/HUD/MULTIMETRO.png" id="8_bxuut"]
+[ext_resource type="Texture2D" uid="uid://beu6k7bf3pwt" path="res://assets/GAMEPLAY/HUD/LOBO STATES/LSTRESS.png" id="9_g04qb"]
+[ext_resource type="PackedScene" uid="uid://dwn1mep3mo0d0" path="res://scenes/utils/pause.tscn" id="10_ida7w"]
+[ext_resource type="Texture2D" uid="uid://bysy6ww3ekwb" path="res://assets/GAMEPLAY/HUD/PAUSE.png" id="11_4wmb1"]
+[ext_resource type="Script" uid="uid://d4e8udqtg0wwg" path="res://scripts/pause_button.gd" id="12_5qtw0"]
+[ext_resource type="Script" uid="uid://dhn63vtetg6ma" path="res://scripts/retry_button.gd" id="13_xidjn"]
+[ext_resource type="PackedScene" uid="uid://cg8admshrbapi" path="res://scenes/game_over.tscn" id="14_45jfw"]
+
+[node name="Teste" type="Node2D" unique_id=1359308894]
+scale = Vector2(0.941, 0.941)
+script = ExtResource("1_b4tpv")
+reset_path = "res://scenes/levels/level2.tscn"
+
+[node name="Mesa" type="Node2D" parent="." unique_id=388698699]
+position = Vector2(184, -101)
+
+[node name="BG" type="Sprite2D" parent="Mesa" unique_id=411277387]
+position = Vector2(429.17743, 449.5653)
+scale = Vector2(0.63906246, 0.6462963)
+texture = ExtResource("2_hkuam")
+
+[node name="FonteEnergia" parent="Mesa" unique_id=1846498572 instance=ExtResource("4_sqrei")]
+position = Vector2(370.729, 599.40594)
+
+[node name="_2" parent="Mesa" unique_id=1158597934 instance=ExtResource("3_f3b2k")]
+position = Vector2(270.83527, 599.40594)
+
+[node name="BlocoResistencia" parent="Mesa" unique_id=920659298 instance=ExtResource("5_yhrca")]
+position = Vector2(475.93628, 407.0574)
+
+[node name="BlocoL" parent="Mesa" unique_id=2140648214 instance=ExtResource("6_4eecq")]
+position = Vector2(172.0043, 599.40594)
+rotation = 1.5707964
+
+[node name="_3" parent="Mesa" unique_id=1115947543 instance=ExtResource("3_f3b2k")]
+position = Vector2(467.43463, 599.4059)
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="_4" parent="Mesa" unique_id=959352654 instance=ExtResource("3_f3b2k")]
+position = Vector2(565.20294, 599.4059)
+scale = Vector2(0.9999999, 0.9999999)
+
+[node name="BlocoL3" parent="Mesa" unique_id=553430489 instance=ExtResource("6_4eecq")]
+position = Vector2(674.661, 599.40594)
+rotation = 1.5707964
+
+[node name="_5" parent="Mesa" unique_id=819936790 instance=ExtResource("3_f3b2k")]
+position = Vector2(674.661, 504.8257)
+scale = Vector2(0.9999999, 0.9999999)
+
+[node name="BlocoL4" parent="Mesa" unique_id=742105379 instance=ExtResource("6_4eecq")]
+position = Vector2(674.66095, 407.0574)
+rotation = 1.5707964
+
+[node name="_6" parent="Mesa" unique_id=914761952 instance=ExtResource("3_f3b2k")]
+position = Vector2(370.729, 407.05743)
+
+[node name="BlocoResistencia3" parent="Mesa" unique_id=1799867123 instance=ExtResource("5_yhrca")]
+position = Vector2(269.77264, 407.05743)
+
+[node name="BlocoL5" parent="Mesa" unique_id=446134786 instance=ExtResource("6_4eecq")]
+position = Vector2(172.00424, 407.0574)
+rotation = 1.5707964
+
+[node name="_7" parent="Mesa" unique_id=902746532 instance=ExtResource("3_f3b2k")]
+position = Vector2(172.00424, 504.82574)
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="BlocoL6" parent="Mesa" unique_id=499043905 instance=ExtResource("6_4eecq")]
+position = Vector2(172.00424, 307.1637)
+rotation = 1.5707964
+
+[node name="BlocoL7" parent="Mesa" unique_id=1133112009 instance=ExtResource("6_4eecq")]
+position = Vector2(674.66095, 307.1637)
+rotation = 1.5707964
+
+[node name="_8" parent="Mesa" unique_id=1728586725 instance=ExtResource("3_f3b2k")]
+position = Vector2(270.83527, 307.16364)
+
+[node name="_9" parent="Mesa" unique_id=53569752 instance=ExtResource("3_f3b2k")]
+position = Vector2(571.57916, 307.16364)
+
+[node name="_10" parent="Mesa" unique_id=1250266383 instance=ExtResource("3_f3b2k")]
+position = Vector2(475.93622, 307.16364)
+
+[node name="_11" parent="Mesa" unique_id=603371916 instance=ExtResource("3_f3b2k")]
+position = Vector2(369.6663, 307.16364)
+
+[node name="BlocoResistencia2" parent="Mesa" unique_id=1880145063 instance=ExtResource("5_yhrca")]
+position = Vector2(571.5792, 407.0574)
+
+[node name="Relógio" type="Sprite2D" parent="." unique_id=1634044171]
+position = Vector2(104.14452, 238.04466)
+scale = Vector2(0.6, 0.7)
+texture = ExtResource("7_b3p8y")
+
+[node name="Multímetro" type="Sprite2D" parent="." unique_id=186407304]
+position = Vector2(1086.0786, 505.84485)
+scale = Vector2(0.68, 0.68)
+texture = ExtResource("8_bxuut")
+
+[node name="Tempo" type="Sprite2D" parent="." unique_id=54201089]
+position = Vector2(491.93414, 274.1392)
+scale = Vector2(0.5137376, 0.47631562)
+texture = ExtResource("9_g04qb")
+
+[node name="Pause" parent="." unique_id=1840414320 instance=ExtResource("10_ida7w")]
+visible = false
+scale = Vector2(1.06, 1.06)
+
+[node name="PauseButton" type="TextureButton" parent="." unique_id=1975204432]
+offset_left = 1102.0192
+offset_top = -14.877787
+offset_right = 1244.0192
+offset_bottom = 127.122215
+scale = Vector2(0.5, 0.5)
+pivot_offset_ratio = Vector2(0.5, 0.5)
+size_flags_horizontal = 0
+layout_direction = 1
+texture_normal = ExtResource("11_4wmb1")
+texture_pressed = ExtResource("11_4wmb1")
+texture_hover = ExtResource("11_4wmb1")
+texture_focused = ExtResource("11_4wmb1")
+script = ExtResource("12_5qtw0")
+
+[node name="RetryButton" type="TextureButton" parent="." unique_id=1238340949]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.5, 0.5)
+pivot_offset_ratio = Vector2(0.5, 0.5)
+script = ExtResource("13_xidjn")
+
+[node name="Contagem" type="Timer" parent="." unique_id=667262089]
+autostart = true
+
+[node name="Contagemm" type="Label" parent="." unique_id=604627491]
+offset_left = 93.51753
+offset_top = 221.04143
+offset_right = 133.51753
+offset_bottom = 244.04143
+
+[node name="Game Over" parent="." unique_id=1032548336 instance=ExtResource("14_45jfw")]
+visible = false
+
+[connection signal="mouse_entered" from="PauseButton" to="PauseButton" method="mouse_entered"]
+[connection signal="mouse_exited" from="PauseButton" to="PauseButton" method="mouse_exited"]
+[connection signal="pressed" from="PauseButton" to="." method="_on_pause_button_pressed"]
+[connection signal="mouse_entered" from="RetryButton" to="RetryButton" method="mouse_entered"]
+[connection signal="mouse_exited" from="RetryButton" to="RetryButton" method="mouse_exited"]
+[connection signal="pressed" from="RetryButton" to="." method="_on_retry_button_pressed"]
+[connection signal="timeout" from="Contagem" to="." method="timeout"]

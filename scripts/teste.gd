@@ -3,13 +3,14 @@ extends Node2D
 @onready var pause_menu = $Pause
 @onready var game_over = $"Game Over"
 var paused = true
-var tempo = 5
+var tempo = 30
 @onready var label = $Contagemm
 @onready var timer = $Contagem
 
-const GOAL_RESISTENCE = 0
-const GOAL_CAPACITANCE = 0
-const GOAL_CURRENT = 220
+@export var reset_path = "res://scenes/Teste.tscn"
+@export var goal_resistence = 0
+@export var goal_capacitance = 0
+@export var goal_current = 220
 
 func _ready() -> void:
 	timer.autostart = true
@@ -21,7 +22,7 @@ func _process(_delta: float) -> void:
 		Engine.time_scale = 0
 		game_over.show()
 	
-	if GOAL_RESISTENCE == EletricSystem.sum_resistence and GOAL_CAPACITANCE == EletricSystem.sum_capacitance and GOAL_CURRENT == EletricSystem.current:
+	if goal_resistence == EletricSystem.sum_resistence and goal_capacitance == EletricSystem.sum_capacitance and goal_current == EletricSystem.current:
 		print("vitoria")
 
 func _on_pause_button_pressed() -> void:
@@ -37,7 +38,7 @@ func pauseMenu():
 	paused = !paused
 
 func reset():
-	get_tree().change_scene_to_file("res://scenes/Teste.tscn")
+	get_tree().change_scene_to_file(reset_path)
 
 func timeout() -> void:
 	tempo -= 1
