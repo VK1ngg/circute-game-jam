@@ -11,10 +11,12 @@ config_version=5
 [application]
 
 config/name="Circute Game Jam"
-run/main_scene="uid://diufskali664g"
+run/main_scene="uid://dbvxv05h4lx4m"
 config/features=PackedStringArray("4.7", "GL Compatibility")
+boot_splash/bg_color=Color(0, 0, 0, 1)
 boot_splash/show_image=false
 config/icon="res://icon.svg"
+run/bg_color=Color(0.14, 0.14, 0.14, 1)
 
 [autoload]
 
@@ -24,6 +26,7 @@ EletricSystem="*uid://6vnxadmqgdk7"
 
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+mouse_cursor/custom_image="uid://cdysiqengfxqp"
 window/show_image=true
 
 [dotnet]
