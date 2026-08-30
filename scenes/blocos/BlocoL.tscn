@@ -1,10 +1,13 @@
 [gd_scene format=3 uid="uid://bav4f3xe874qf"]
 
-[ext_resource type="Script" uid="uid://f8ruo8oy8svv" path="res://scripts/blocos/BlocoL.gd" id="1_jcayw"]
+[ext_resource type="Script" uid="uid://dextotkc6ocog" path="res://scripts/blocos/Circuito.gd" id="1_jcayw"]
 [ext_resource type="Texture2D" uid="uid://ccurxsmdachph" path="res://assets/GAMEPLAY/HUD/TILES.png" id="2_nfctm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7131d"]
 size = Vector2(70, 42)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ral2h"]
+size = Vector2(40, 38)
 
 [sub_resource type="Animation" id="Animation_dci40"]
 length = 0.001
@@ -44,10 +47,7 @@ _data = {
 &"energizado": SubResource("Animation_nfbpx")
 }
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ral2h"]
-size = Vector2(40, 38)
-
-[node name="BlocoL" type="Area2D" unique_id=2140648214]
+[node name="BlocoL" type="Area2D" unique_id=2140648214 groups=["caminhos"]]
 script = ExtResource("1_jcayw")
 
 [node name="_" type="Sprite2D" parent="." unique_id=1524896028]
@@ -56,15 +56,17 @@ region_enabled = true
 region_rect = Rect2(96, 0, 96, 96)
 
 [node name="CS" type="CollisionShape2D" parent="." unique_id=1014607624]
-position = Vector2(15, 0)
+position = Vector2(23, 0)
 shape = SubResource("RectangleShape2D_7131d")
+one_way_collision_direction = Vector2(1, 0)
+
+[node name="CS2" type="CollisionShape2D" parent="." unique_id=2052144550]
+position = Vector2(8, 40)
+shape = SubResource("RectangleShape2D_ral2h")
+one_way_collision_direction = Vector2(0, -1)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=933685028]
 libraries/ = SubResource("AnimationLibrary_ewp4b")
-
-[node name="CS2" type="CollisionShape2D" parent="." unique_id=2052144550]
-position = Vector2(0, 40)
-shape = SubResource("RectangleShape2D_ral2h")
 
 [connection signal="area_entered" from="." to="." method="energizar"]
 [connection signal="area_exited" from="." to="." method="desenergizar"]
