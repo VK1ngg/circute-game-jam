@@ -14,95 +14,8 @@
 [ext_resource type="Texture2D" uid="uid://beu6k7bf3pwt" path="res://assets/GAMEPLAY/HUD/LOBO STATES/LSTRESS.png" id="11_xjlet"]
 [ext_resource type="Texture2D" uid="uid://bysy6ww3ekwb" path="res://assets/GAMEPLAY/HUD/PAUSE.png" id="12_3jmak"]
 [ext_resource type="Script" uid="uid://d4e8udqtg0wwg" path="res://scripts/pause_button.gd" id="13_qkdw7"]
-
-[sub_resource type="Animation" id="Animation_qkdw7"]
-resource_name = "DesPause"
-length = 0.4
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Pause:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.4),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Mesa:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.4),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(0.73333335, 0.73333335, 0.73333335, 1), Color(1, 1, 1, 1)]
-}
-
-[sub_resource type="Animation" id="Animation_ci5gr"]
-resource_name = "Pause"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Pause:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.4),
-"transitions": PackedFloat32Array(1, 0.5),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Mesa:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0.033333335, 0.43333334),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(0.73333335, 0.73333335, 0.73333335, 1)]
-}
-
-[sub_resource type="Animation" id="Animation_pfktr"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Pause:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Mesa:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_mg4rx"]
-_data = {
-&"DesPause": SubResource("Animation_qkdw7"),
-&"Pause": SubResource("Animation_ci5gr"),
-&"RESET": SubResource("Animation_pfktr")
-}
+[ext_resource type="Script" uid="uid://dhn63vtetg6ma" path="res://scripts/retry_button.gd" id="15_mg4rx"]
+[ext_resource type="PackedScene" uid="uid://cg8admshrbapi" path="res://scenes/game_over.tscn" id="15_pfktr"]
 
 [node name="Teste" type="Node2D" unique_id=1359308894]
 scale = Vector2(0.941, 0.941)
@@ -141,7 +54,7 @@ rotation = 1.5707964
 
 [node name="Relógio" type="Sprite2D" parent="." unique_id=1634044171]
 position = Vector2(104.14452, 238.04466)
-scale = Vector2(0.5819033, 0.5146064)
+scale = Vector2(0.6, 0.7)
 texture = ExtResource("9_3jmak")
 
 [node name="Multímetro" type="Sprite2D" parent="." unique_id=186407304]
@@ -149,10 +62,7 @@ position = Vector2(1086.0786, 505.84485)
 scale = Vector2(0.68, 0.68)
 texture = ExtResource("10_qkdw7")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=927930365]
-libraries/ = SubResource("AnimationLibrary_mg4rx")
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=54201089]
+[node name="Tempo" type="Sprite2D" parent="." unique_id=54201089]
 position = Vector2(491.93414, 274.1392)
 scale = Vector2(0.5137376, 0.47631562)
 texture = ExtResource("11_xjlet")
@@ -176,6 +86,29 @@ texture_hover = ExtResource("12_3jmak")
 texture_focused = ExtResource("12_3jmak")
 script = ExtResource("13_qkdw7")
 
+[node name="RetryButton" type="TextureButton" parent="." unique_id=1238340949]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.5, 0.5)
+pivot_offset_ratio = Vector2(0.5, 0.5)
+script = ExtResource("15_mg4rx")
+
+[node name="Contagem" type="Timer" parent="." unique_id=667262089]
+autostart = true
+
+[node name="Contagemm" type="Label" parent="." unique_id=604627491]
+offset_left = 93.51753
+offset_top = 221.04143
+offset_right = 133.51753
+offset_bottom = 244.04143
+
+[node name="Game Over" parent="." unique_id=1032548336 instance=ExtResource("15_pfktr")]
+visible = false
+
 [connection signal="mouse_entered" from="PauseButton" to="PauseButton" method="mouse_entered"]
 [connection signal="mouse_exited" from="PauseButton" to="PauseButton" method="mouse_exited"]
 [connection signal="pressed" from="PauseButton" to="." method="_on_pause_button_pressed"]
+[connection signal="mouse_entered" from="RetryButton" to="RetryButton" method="mouse_entered"]
+[connection signal="mouse_exited" from="RetryButton" to="RetryButton" method="mouse_exited"]
+[connection signal="pressed" from="RetryButton" to="." method="_on_retry_button_pressed"]
+[connection signal="timeout" from="Contagem" to="." method="timeout"]
