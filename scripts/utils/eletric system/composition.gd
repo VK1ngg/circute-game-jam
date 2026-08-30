@@ -1,4 +1,3 @@
-class_name Composition
 extends Node
 
 var resistence: float

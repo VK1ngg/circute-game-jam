@@ -31,8 +31,7 @@ func pauseMenu():
 	paused = !paused
 
 func reset():
-	ScenesManager.Instance.change_2d_scene("res://scenes/Teste.tscn")
-	ScenesManager.Instance.change_control_scene("")
+	get_tree().change_scene_to_file("res://scenes/Teste.tscn")
 
 func timeout() -> void:
 	tempo -= 1
