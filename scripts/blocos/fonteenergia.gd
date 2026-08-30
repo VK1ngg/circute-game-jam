@@ -8,4 +8,4 @@ func energizar(body: Node2D) -> void:
 	body.energizar(body)
 
 func desenergizar(body: Node2D):
-	body.energia -= 1
+	body.energia = false

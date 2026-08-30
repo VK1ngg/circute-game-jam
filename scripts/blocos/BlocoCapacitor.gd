@@ -11,4 +11,6 @@ func desenergizar(body: Node2D) -> void: body.energia = false
 
 func _process(_delta: float) -> void:
 	if energia == true: $AnimationPlayer.play("energizado")
-	else: $AnimationPlayer.play("RESET")
+	elif energia == false: $AnimationPlayer.play("RESET")
+	
+	
