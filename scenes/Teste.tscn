@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://b3uvodqf57xp8" path="res://assets/GAMEPLAY/HUD/CLOCK.png" id="9_3jmak"]
 [ext_resource type="PackedScene" uid="uid://dwn1mep3mo0d0" path="res://scenes/utils/pause.tscn" id="10_mjud8"]
 [ext_resource type="Texture2D" uid="uid://byvawknht1nnh" path="res://assets/GAMEPLAY/HUD/MULTIMETRO.png" id="10_qkdw7"]
+[ext_resource type="Texture2D" uid="uid://beu6k7bf3pwt" path="res://assets/GAMEPLAY/HUD/LOBO STATES/LSTRESS.png" id="11_xjlet"]
 
 [sub_resource type="Animation" id="Animation_qkdw7"]
 resource_name = "DesPause"
@@ -107,38 +108,40 @@ scale = Vector2(0.941, 0.941)
 position = Vector2(184, -101)
 
 [node name="BG" type="Sprite2D" parent="Mesa" unique_id=411277387]
-position = Vector2(429.17743, 449.56534)
+position = Vector2(429.17743, 450.62805)
 scale = Vector2(0.63906246, 0.6462963)
 texture = ExtResource("7_20svv")
 
 [node name="_" parent="Mesa" unique_id=1728586725 instance=ExtResource("1_qjden")]
-position = Vector2(230, 257)
+position = Vector2(272.12967, 292.0691)
 
 [node name="FonteEnergia" parent="Mesa" unique_id=1846498572 instance=ExtResource("2_20svv")]
-position = Vector2(132, 258)
+position = Vector2(174.12967, 293.0691)
 
 [node name="_2" parent="Mesa" unique_id=1158597934 instance=ExtResource("1_qjden")]
-position = Vector2(328, 256)
+position = Vector2(370.12967, 291.0691)
 
 [node name="BlocoL2" parent="Mesa" unique_id=1729569189 instance=ExtResource("4_mg82l")]
-position = Vector2(425, 352)
+position = Vector2(467.12967, 387.0691)
 
 [node name="BlocoResistencia" parent="Mesa" unique_id=920659298 instance=ExtResource("5_mjud8")]
-position = Vector2(524, 352)
+position = Vector2(566.12964, 387.0691)
 
 [node name="BlocoResistencia2" parent="Mesa" unique_id=668896888 instance=ExtResource("6_xjlet")]
-position = Vector2(425, 449)
+position = Vector2(467.12967, 484.0691)
 rotation = 1.5707964
 
 [node name="BlocoL" parent="Mesa" unique_id=2140648214 instance=ExtResource("7_mjud8")]
-position = Vector2(427.05206, 254.02869)
+position = Vector2(469.18173, 289.09778)
+rotation = 1.5707964
 
 [node name="Relógio" type="Sprite2D" parent="." unique_id=1634044171]
-position = Vector2(169, 343)
+position = Vector2(104.14452, 238.04466)
+scale = Vector2(0.5819033, 0.5146064)
 texture = ExtResource("9_3jmak")
 
 [node name="Multímetro" type="Sprite2D" parent="." unique_id=186407304]
-position = Vector2(1045, 501.12854)
+position = Vector2(1086.0786, 505.84485)
 scale = Vector2(0.68, 0.68)
 texture = ExtResource("10_qkdw7")
 
@@ -147,3 +150,8 @@ libraries/ = SubResource("AnimationLibrary_mg4rx")
 
 [node name="Pause" parent="." unique_id=1840414320 instance=ExtResource("10_mjud8")]
 visible = false
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=54201089]
+position = Vector2(491.93414, 274.1392)
+scale = Vector2(0.5137376, 0.47631562)
+texture = ExtResource("11_xjlet")
