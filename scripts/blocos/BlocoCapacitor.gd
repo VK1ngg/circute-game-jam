@@ -1,6 +1,7 @@
 extends Area2D
 
 var energia = false
+
 @onready var sprite = $_
 
 func energizar(body: Node2D) -> void:
