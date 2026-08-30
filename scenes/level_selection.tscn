@@ -44,6 +44,26 @@ layout_mode = 2
 theme = ExtResource("1_u1g2d")
 text = "3"
 
+[node name="Button5" type="Button" parent="CenterContainer/HBoxContainer" unique_id=269171860]
+layout_mode = 2
+theme = ExtResource("1_u1g2d")
+text = "4"
+
+[node name="Button6" type="Button" parent="CenterContainer/HBoxContainer" unique_id=1039674730]
+layout_mode = 2
+theme = ExtResource("1_u1g2d")
+text = "5"
+
+[node name="Button7" type="Button" parent="CenterContainer/HBoxContainer" unique_id=368627106]
+layout_mode = 2
+theme = ExtResource("1_u1g2d")
+text = "6"
+
+[node name="Button8" type="Button" parent="CenterContainer/HBoxContainer" unique_id=1301387026]
+layout_mode = 2
+theme = ExtResource("1_u1g2d")
+text = "7"
+
 [node name="Button4" type="Button" parent="CenterContainer/HBoxContainer" unique_id=1618011543]
 layout_mode = 2
 theme = ExtResource("1_u1g2d")
