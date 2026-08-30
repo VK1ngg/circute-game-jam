@@ -1,11 +1,16 @@
-extends Area2D
+extends CompositionBlock
 
-var energy = false
-var line: String = ''
 @onready var sprite = $_
 
 func energizar(body: Node2D) -> void:
 	if energy == true: body.energy = true
+
+func activate(line_string: String) -> void:
+	line = line_string
+	energy = true
+
+func sum_value() -> void:
+	pass
 
 func _process(_delta: float) -> void:
 	if energy == true: $AnimationPlayer.play("energizado")
