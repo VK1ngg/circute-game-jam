@@ -4,16 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://bl24h582ifkmf" path="res://assets/GAMEPLAY/HUD/PAUSESCREENBUTTON.png" id="2_tbwuq"]
 [ext_resource type="Texture2D" uid="uid://cwafge2piob3q" path="res://assets/GAMEPLAY/HUD/END_LVL/GAME OVER TEXT.png" id="3_racf3"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_irg28"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2jtsn"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8bugq"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wawo4"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_56v3a"]
-
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wqhvx"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tbwuq"]
@@ -29,28 +19,11 @@ layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_xeevv")
 
-[node name="Retry" type="Button" parent="." unique_id=1680976657]
-layout_mode = 0
-offset_left = 190.0
-offset_top = 487.0
-offset_right = 483.0
-offset_bottom = 584.0
-scale = Vector2(0.9, 0.9)
-pivot_offset_ratio = Vector2(0.5, 0.5)
-theme_override_styles/normal = SubResource("StyleBoxEmpty_irg28")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_2jtsn")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_8bugq")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_wawo4")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_56v3a")
-icon = ExtResource("2_tbwuq")
-autowrap_mode = 2
-autowrap_trim_flags = 0
-
 [node name="Quit" type="Button" parent="." unique_id=1438187334]
 layout_mode = 0
-offset_left = 636.0
+offset_left = 430.00006
 offset_top = 481.0
-offset_right = 937.0
+offset_right = 731.00006
 offset_bottom = 586.0
 scale = Vector2(0.9, 0.9)
 pivot_offset_ratio = Vector2(0.5, 0.5)
@@ -65,29 +38,16 @@ icon = ExtResource("2_tbwuq")
 position = Vector2(557, 244)
 texture = ExtResource("3_racf3")
 
-[node name="Retry2" type="Label" parent="." unique_id=856045922]
-layout_mode = 0
-offset_left = 250.0
-offset_top = 489.0
-offset_right = 405.0
-offset_bottom = 572.0
-theme_override_constants/outline_size = 5
-theme_override_font_sizes/font_size = 60
-text = "Retry"
-
 [node name="Quit2" type="Label" parent="." unique_id=458289815]
 layout_mode = 0
-offset_left = 714.0
+offset_left = 508.00006
 offset_top = 489.0
-offset_right = 840.0
+offset_right = 634.00006
 offset_bottom = 572.0
 theme_override_constants/outline_size = 5
 theme_override_font_sizes/font_size = 60
 text = "Quit"
 
-[connection signal="mouse_entered" from="Retry" to="." method="retry_mouse_entered"]
-[connection signal="mouse_exited" from="Retry" to="." method="retry_mouse_exited"]
-[connection signal="pressed" from="Retry" to="." method="retry_pressed"]
 [connection signal="mouse_entered" from="Quit" to="." method="quit_mouse_entered"]
 [connection signal="mouse_exited" from="Quit" to="." method="quit_mouse_exited"]
 [connection signal="pressed" from="Quit" to="." method="quit_pressed"]

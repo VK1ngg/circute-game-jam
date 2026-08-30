@@ -11,7 +11,7 @@ var sum_resistence: float = 0
 var sum_capacitance: float = 0
 var current: float = 0
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	sum_resistence = get_sum_resistence()
 	sum_capacitance = get_sum_capacitance()
 	current = get_current()
