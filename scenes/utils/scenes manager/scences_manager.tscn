@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c0vfxqh5hyjdi"]
 
-[ext_resource type="Script" uid="uid://bhyj6aan4afi1" path="res://scripts/utils/scenes manager/scenes_manager.gd" id="1_6dk84"]
+[ext_resource type="Script" uid="uid://dd37xdoka5wie" path="res://scripts/utils/scenes manager/circuits_manager.gd" id="1_6dk84"]
 [ext_resource type="PackedScene" uid="uid://dbvxv05h4lx4m" path="res://scenes/splash_screen_manager.tscn" id="2_6dk84"]
 
 [node name="ScencesManager" type="Node" unique_id=1383247078]

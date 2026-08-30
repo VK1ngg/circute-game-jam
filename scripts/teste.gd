@@ -39,11 +39,9 @@ func pauseMenu():
 	paused = !paused
 
 func reset():
-<<<<<<< HEAD
 	get_tree().change_scene_to_file("res://scenes/Teste.tscn")
-=======
-	get_tree().change_scene_to_file(reset_path)
->>>>>>> 8d2da037d05ce5c1ca442d8b015b95348035e929
+	get_tree().change_scene_to_file(reset_path)	
+	
 
 func timeout() -> void:
 	tempo -= 1
