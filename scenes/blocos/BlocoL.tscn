@@ -62,9 +62,7 @@ shape = SubResource("RectangleShape2D_7131d")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=933685028]
 libraries/ = SubResource("AnimationLibrary_ewp4b")
 
-[node name="Area2D" type="Area2D" parent="." unique_id=393763127]
-
-[node name="CS2" type="CollisionShape2D" parent="Area2D" unique_id=2052144550]
+[node name="CS2" type="CollisionShape2D" parent="." unique_id=2052144550]
 position = Vector2(0, 40)
 shape = SubResource("RectangleShape2D_ral2h")
 

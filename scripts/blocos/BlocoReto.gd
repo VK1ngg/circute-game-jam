@@ -9,10 +9,8 @@ func energizar(body: Node2D) -> void:
 func desenergizar(body: Node2D) -> void: body.energia = false
 
 func _process(_delta: float) -> void:
-	if energia == true:
-		$AnimationPlayer.play("energizado")
-	else:
-		$AnimationPlayer.play("RESET")
+	if energia == true: $AnimationPlayer.play("energizado")
+	else: $AnimationPlayer.play("RESET")
 
 func _on_mouse_entered() -> void: sprite.scale = Vector2(1.05, 1.05)
 
