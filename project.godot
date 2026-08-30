@@ -21,6 +21,7 @@ run/bg_color=Color(0.14, 0.14, 0.14, 1)
 [autoload]
 
 EletricSystem="*uid://6vnxadmqgdk7"
+SceneLoader="*uid://d0wfl3ouptefj"
 
 [display]
 
