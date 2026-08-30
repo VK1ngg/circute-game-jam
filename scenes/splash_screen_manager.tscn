@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://dbvxv05h4lx4m"]
+
+[ext_resource type="Script" uid="uid://cqrbvipie0cub" path="res://scenes/splash_screen_manager.gd" id="1_kkrr7"]
+[ext_resource type="Texture2D" uid="uid://cxb1nof4k84d6" path="res://assets/153 Sem Título_20260706210753.png" id="2_yqk22"]
+
+[node name="SplashScreenManager" type="Control" unique_id=828785562 node_paths=PackedStringArray("splash_screen")]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_kkrr7")
+splash_screen = NodePath("CenterContainer/TextureRect")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2067989713]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 29.000002
+anchor_bottom = 16.425001
+offset_right = -0.00012207031
+offset_bottom = -6.1035156e-05
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=216492079]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 377.0
+offset_top = 113.0
+offset_right = 4433.0
+offset_bottom = 4169.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.1, 0.1)
+
+[node name="TextureRect" type="TextureRect" parent="CenterContainer" unique_id=2036234465]
+layout_mode = 2
+texture = ExtResource("2_yqk22")
+stretch_mode = 3
