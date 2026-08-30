@@ -24,8 +24,8 @@ func _process(_delta: float) -> void:
 		Engine.time_scale = 0
 		game_over.show()
 	
-	if goal_resistence == EletricSystem.sum_resistence and goal_capacitance == EletricSystem.sum_capacitance and goal_current == EletricSystem.current:
-		victory.show()
+	#if goal_resistence == EletricSystem.sum_resistence and goal_capacitance == EletricSystem.sum_capacitance and goal_current == EletricSystem.current:
+		#victory.show()
 
 func _on_pause_button_pressed() -> void:
 	pauseMenu()
