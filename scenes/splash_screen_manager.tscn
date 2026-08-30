@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dbvxv05h4lx4m"]
 
 [ext_resource type="Script" uid="uid://cqrbvipie0cub" path="res://scenes/splash_screen_manager.gd" id="1_kkrr7"]
+[ext_resource type="PackedScene" uid="uid://demqcytm636wn" path="res://scenes/Main Menu.tscn" id="2_4krii"]
 [ext_resource type="Texture2D" uid="uid://cxb1nof4k84d6" path="res://assets/153 Sem Título_20260706210753.png" id="2_yqk22"]
 
 [node name="SplashScreenManager" type="Control" unique_id=828785562 node_paths=PackedStringArray("splash_screen")]
@@ -9,6 +10,7 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_kkrr7")
+load_scene = ExtResource("2_4krii")
 splash_screen = NodePath("CenterContainer/TextureRect")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=2067989713]

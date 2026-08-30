@@ -17,7 +17,7 @@ func fade() -> void:
 	tween.tween_property(splash_screen, "modulate:a", 0.0, fade_out_time)
 	tween.tween_interval(out_time)
 	await tween.finished
-	get_tree().change_scene_to_packed(load_scene)
+	ScenesManager.Instance.change_control_scene("res://scenes/Main Menu.tscn")
 	
 func _ready() -> void:
 	fade()
