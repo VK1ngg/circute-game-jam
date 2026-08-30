@@ -7,12 +7,9 @@
 [ext_resource type="PackedScene" uid="uid://cq5rhdqk3togr" path="res://scenes/blocos/BlocoResistencia.tscn" id="5_mjud8"]
 [ext_resource type="PackedScene" uid="uid://ddo4k44xw6jhj" path="res://scenes/blocos/BlocoCapacitor.tscn" id="6_xjlet"]
 [ext_resource type="Texture2D" uid="uid://dfptbut3wdclt" path="res://assets/GAMEPLAY/desk.png" id="7_20svv"]
-[ext_resource type="Texture2D" uid="uid://bysy6ww3ekwb" path="res://assets/GAMEPLAY/HUD/PAUSE.png" id="8_xjlet"]
 [ext_resource type="Texture2D" uid="uid://b3uvodqf57xp8" path="res://assets/GAMEPLAY/HUD/CLOCK.png" id="9_3jmak"]
+[ext_resource type="PackedScene" uid="uid://dwn1mep3mo0d0" path="res://scenes/utils/pause.tscn" id="10_mjud8"]
 [ext_resource type="Texture2D" uid="uid://byvawknht1nnh" path="res://assets/GAMEPLAY/HUD/MULTIMETRO.png" id="10_qkdw7"]
-[ext_resource type="Texture2D" uid="uid://du6iujd5n5fki" path="res://assets/GAMEPLAY/HUD/PAUSESCREENBG.png" id="11_ci5gr"]
-[ext_resource type="Texture2D" uid="uid://dp7lx7jmdudl1" path="res://assets/GAMEPLAY/HUD/PAUSESCREENTEXT.png" id="12_qkdw7"]
-[ext_resource type="Texture2D" uid="uid://bl24h582ifkmf" path="res://assets/GAMEPLAY/HUD/PAUSESCREENBUTTON.png" id="13_ci5gr"]
 
 [sub_resource type="Animation" id="Animation_qkdw7"]
 resource_name = "DesPause"
@@ -103,17 +100,16 @@ _data = {
 &"RESET": SubResource("Animation_pfktr")
 }
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u3vqg"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pgolf"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q6dmw"]
-
 [node name="Teste" type="Node2D" unique_id=1359308894]
 scale = Vector2(0.941, 0.941)
 
 [node name="Mesa" type="Node2D" parent="." unique_id=388698699]
 position = Vector2(184, -101)
+
+[node name="BG" type="Sprite2D" parent="Mesa" unique_id=411277387]
+position = Vector2(429.17743, 449.56534)
+scale = Vector2(0.63906246, 0.6462963)
+texture = ExtResource("7_20svv")
 
 [node name="_" parent="Mesa" unique_id=1728586725 instance=ExtResource("1_qjden")]
 position = Vector2(230, 257)
@@ -138,22 +134,6 @@ position = Vector2(524, 352)
 position = Vector2(425, 449)
 rotation = 1.5707964
 
-[node name="BG" type="Sprite2D" parent="Mesa" unique_id=411277387]
-position = Vector2(429.17746, 449.56534)
-scale = Vector2(0.6390625, 0.6462963)
-texture = ExtResource("7_20svv")
-
-[node name="Button" type="TextureButton" parent="." unique_id=289487689]
-offset_left = 1102.2568
-offset_top = 23.250795
-offset_right = 1244.2568
-offset_bottom = 165.2508
-scale = Vector2(0.5, 0.5)
-texture_normal = ExtResource("8_xjlet")
-texture_pressed = ExtResource("8_xjlet")
-texture_hover = ExtResource("8_xjlet")
-texture_focused = ExtResource("8_xjlet")
-
 [node name="Relógio" type="Sprite2D" parent="." unique_id=1634044171]
 position = Vector2(169, 343)
 texture = ExtResource("9_3jmak")
@@ -166,88 +146,5 @@ texture = ExtResource("10_qkdw7")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=927930365]
 libraries/ = SubResource("AnimationLibrary_mg4rx")
 
-[node name="Pause" type="Control" parent="." unique_id=219832563]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 51.0
-offset_bottom = 51.0
-size_flags_horizontal = 4
-size_flags_vertical = 4
-
-[node name="PauseBG" type="Sprite2D" parent="Pause" unique_id=375537103]
-position = Vector2(600, 324)
-scale = Vector2(0.95, 0.95)
-texture = ExtResource("11_ci5gr")
-
-[node name="Pawse" type="Sprite2D" parent="Pause" unique_id=454959810]
-position = Vector2(600, 102.019)
-texture = ExtResource("12_qkdw7")
-
-[node name="ResumeBG" type="TextureButton" parent="Pause" unique_id=203355422]
-layout_mode = 1
-offset_left = 469.99997
-offset_top = 169.99998
-offset_right = 763.0
-offset_bottom = 267.0
-scale = Vector2(0.9, 0.9)
-texture_normal = ExtResource("13_ci5gr")
-texture_pressed = ExtResource("13_ci5gr")
-texture_hover = ExtResource("13_ci5gr")
-texture_focused = ExtResource("13_ci5gr")
-
-[node name="ResumeBG2" type="TextureButton" parent="Pause" unique_id=660255749]
-layout_mode = 0
-offset_left = 470.0
-offset_top = 280.0
-offset_right = 763.0
-offset_bottom = 377.0
-scale = Vector2(0.9, 0.9)
-texture_normal = ExtResource("13_ci5gr")
-texture_pressed = ExtResource("13_ci5gr")
-texture_hover = ExtResource("13_ci5gr")
-texture_focused = ExtResource("13_ci5gr")
-
-[node name="ResumeBG3" type="TextureButton" parent="Pause" unique_id=627298713]
-layout_mode = 0
-offset_left = 470.7758
-offset_top = 391.07333
-offset_right = 763.77576
-offset_bottom = 488.07333
-scale = Vector2(0.89999986, 0.89999986)
-texture_normal = ExtResource("13_ci5gr")
-texture_pressed = ExtResource("13_ci5gr")
-texture_hover = ExtResource("13_ci5gr")
-texture_focused = ExtResource("13_ci5gr")
-
-[node name="Resume" type="Label" parent="Pause" unique_id=1530651755]
-layout_mode = 0
-offset_left = 490.0
-offset_top = 170.0
-offset_right = 722.0
-offset_bottom = 253.0
-theme_override_constants/outline_size = 5
-theme_override_font_sizes/font_size = 60
-theme_override_styles/focus = SubResource("StyleBoxEmpty_u3vqg")
-text = "Resume"
-
-[node name="Options" type="Label" parent="Pause" unique_id=2108868596]
-layout_mode = 0
-offset_left = 505.0
-offset_top = 285.0
-offset_right = 696.0
-offset_bottom = 354.0
-theme_override_constants/outline_size = 5
-theme_override_font_sizes/font_size = 50
-theme_override_styles/focus = SubResource("StyleBoxEmpty_pgolf")
-text = "Options"
-
-[node name="Quit" type="Label" parent="Pause" unique_id=73540827]
-layout_mode = 0
-offset_left = 550.0
-offset_top = 395.0
-offset_right = 655.0
-offset_bottom = 464.0
-theme_override_constants/outline_size = 5
-theme_override_font_sizes/font_size = 50
-theme_override_styles/focus = SubResource("StyleBoxEmpty_q6dmw")
-text = "Quit"
+[node name="Pause" parent="." unique_id=1840414320 instance=ExtResource("10_mjud8")]
+visible = false
